@@ -42,14 +42,14 @@ vendor_record_type_STAGING
 prime_vendor_STAGING
 prime_vendor_mwbe_category_STAGING
 prime_contract_purpose_STAGING
-prime_contract_current_amount_DataTypeConverted
-prime_contract_original_amount_DataTypeConverted
-prime_vendor_spent_to_date_DataTypeConverted
-prime_contract_start_date_DataTypeConverted
-prime_contract_end_date_DataTypeConverted
-prime_contract_registration_date_DataTypeConverted
+prime_contract_current_amount_STAGING_DataTypeConverted
+prime_contract_original_amount_STAGING_DataTypeConverted
+prime_vendor_spent_to_date_STAGING_DataTypeConverted
+prime_contract_start_date_STAGING_DataTypeConverted
+prime_contract_end_date_STAGING_DataTypeConverted
+prime_contract_registration_date_STAGING_DataTypeConverted
 prime_contracting_agency_STAGING
-prime_contract_version_DataTypeConverted
+prime_contract_version_STAGING_DataTypeConverted
 parent_contract_id_STAGING
 prime_contract_type_STAGING
 prime_contract_award_method_STAGING
@@ -62,18 +62,18 @@ sub_vendor_mwbe_category_STAGING
 sub_contract_purpose_STAGING
 sub_vendor_status_in_pip_STAGING
 sub_contract_industry_STAGING
-sub_contract_current_amount_DataTypeConverted
-sub_contract_original_amount_DataTypeConverted
-sub_vendor_paid_to_date_DataTypeConverted
-sub_contract_start_date_DataTypeConverted
-sub_contract_end_date_DataTypeConverted
+sub_contract_current_amount_STAGING_DataTypeConverted
+sub_contract_original_amount_STAGING_DataTypeConverted
+sub_vendor_paid_to_date_STAGING_DataTypeConverted
+sub_contract_start_date_STAGING_DataTypeConverted
+sub_contract_end_date_STAGING_DataTypeConverted
 sub_contract_reference_id_STAGING
 
 
 
 
 
-( document_code_FINAL != document_code_STAGING ) || ( prime_contract_id_FINAL != prime_contract_id_STAGING ) || ( contract_includes_sub_vendors_FINAL != contract_includes_sub_vendors_STAGING ) || ( vendor_record_type_FINAL != vendor_record_type_STAGING ) || ( prime_vendor_FINAL != prime_vendor_STAGING ) || ( prime_vendor_mwbe_category_FINAL != prime_vendor_mwbe_category_STAGING ) || ( prime_contract_purpose_FINAL != prime_contract_purpose_STAGING ) || ( prime_contract_current_amount_FINAL != prime_contract_current_amount_DataTypeConverted ) || ( prime_contract_original_amount_FINAL != prime_contract_original_amount_DataTypeConverted ) || ( prime_vendor_spent_to_date_FINAL != prime_vendor_spent_to_date_DataTypeConverted ) || ( prime_contract_start_date_FINAL != prime_contract_start_date_DataTypeConverted ) || ( prime_contract_end_date_FINAL != prime_contract_end_date_DataTypeConverted ) || ( prime_contract_registration_date_FINAL != prime_contract_registration_date_DataTypeConverted ) || ( prime_contracting_agency_FINAL != prime_contracting_agency_STAGING ) || ( prime_contract_version_FINAL != prime_contract_version_DataTypeConverted ) || ( parent_contract_id_FINAL != parent_contract_id_STAGING ) || ( prime_contract_type_FINAL != prime_contract_type_STAGING ) || ( prime_contract_award_method_FINAL != prime_contract_award_method_STAGING ) || ( prime_contract_expense_category_FINAL != prime_contract_expense_category_STAGING ) || ( prime_contract_industry_FINAL != prime_contract_industry_STAGING ) || ( prime_contract_pin_FINAL != prime_contract_pin_STAGING ) || ( prime_contract_apt_pin_FINAL != prime_contract_apt_pin_STAGING ) || ( sub_vendor_FINAL != sub_vendor_STAGING ) || ( sub_vendor_mwbe_category_FINAL != sub_vendor_mwbe_category_STAGING ) || ( sub_contract_purpose_FINAL != sub_contract_purpose_STAGING ) || ( sub_vendor_status_in_pip_FINAL != sub_vendor_status_in_pip_STAGING ) || ( sub_contract_industry_FINAL != sub_contract_industry_STAGING ) || ( sub_contract_current_amount_FINAL != sub_contract_current_amount_DataTypeConverted ) || ( sub_contract_original_amount_FINAL != sub_contract_original_amount_DataTypeConverted ) || ( sub_vendor_paid_to_date_FINAL != sub_vendor_paid_to_date_DataTypeConverted ) || ( sub_contract_start_date_FINAL != sub_contract_start_date_DataTypeConverted ) || ( sub_contract_end_date_FINAL != sub_contract_end_date_DataTypeConverted ) || ( sub_contract_reference_id_FINAL != sub_contract_reference_id_STAGING )
+( document_code_FINAL != document_code_STAGING ) || ( prime_contract_id_FINAL != prime_contract_id_STAGING ) || ( contract_includes_sub_vendors_FINAL != contract_includes_sub_vendors_STAGING ) || ( vendor_record_type_FINAL != vendor_record_type_STAGING ) || ( prime_vendor_FINAL != prime_vendor_STAGING ) || ( prime_vendor_mwbe_category_FINAL != prime_vendor_mwbe_category_STAGING ) || ( prime_contract_purpose_FINAL != prime_contract_purpose_STAGING ) || ( prime_contract_current_amount_FINAL != prime_contract_current_amount_STAGING_DataTypeConverted ) || ( prime_contract_original_amount_FINAL != prime_contract_original_amount_STAGING_DataTypeConverted ) || ( prime_vendor_spent_to_date_FINAL != prime_vendor_spent_to_date_STAGING_DataTypeConverted ) || ( prime_contract_start_date_FINAL != prime_contract_start_date_STAGING_DataTypeConverted ) || ( prime_contract_end_date_FINAL != prime_contract_end_date_STAGING_DataTypeConverted ) || ( prime_contract_registration_date_FINAL != prime_contract_registration_date_STAGING_DataTypeConverted ) || ( prime_contracting_agency_FINAL != prime_contracting_agency_STAGING ) || ( prime_contract_version_FINAL != prime_contract_version_STAGING_DataTypeConverted ) || ( parent_contract_id_FINAL != parent_contract_id_STAGING ) || ( prime_contract_type_FINAL != prime_contract_type_STAGING ) || ( prime_contract_award_method_FINAL != prime_contract_award_method_STAGING ) || ( prime_contract_expense_category_FINAL != prime_contract_expense_category_STAGING ) || ( prime_contract_industry_FINAL != prime_contract_industry_STAGING ) || ( prime_contract_pin_FINAL != prime_contract_pin_STAGING ) || ( prime_contract_apt_pin_FINAL != prime_contract_apt_pin_STAGING ) || ( sub_vendor_FINAL != sub_vendor_STAGING ) || ( sub_vendor_mwbe_category_FINAL != sub_vendor_mwbe_category_STAGING ) || ( sub_contract_purpose_FINAL != sub_contract_purpose_STAGING ) || ( sub_vendor_status_in_pip_FINAL != sub_vendor_status_in_pip_STAGING ) || ( sub_contract_industry_FINAL != sub_contract_industry_STAGING ) || ( sub_contract_current_amount_FINAL != sub_contract_current_amount_STAGING_DataTypeConverted ) || ( sub_contract_original_amount_FINAL != sub_contract_original_amount_STAGING_DataTypeConverted ) || ( sub_vendor_paid_to_date_FINAL != sub_vendor_paid_to_date_STAGING_DataTypeConverted ) || ( sub_contract_start_date_FINAL != sub_contract_start_date_STAGING_DataTypeConverted ) || ( sub_contract_end_date_FINAL != sub_contract_end_date_STAGING_DataTypeConverted ) || ( sub_contract_reference_id_FINAL != sub_contract_reference_id_STAGING )
 
 
 
