@@ -38,3 +38,22 @@ SET
     dbo.Contracts.[sub_contract_reference_id] = ?
 WHERE
     dbo.Contracts.[StagingID] = ?
+
+
+
+
+-- Budget
+UPDATE
+    dbo.Budget
+SET
+    dbo.Budget.[LastUpdatedTimestamp] = ?,
+    dbo.Budget.[agency] = ?,
+    dbo.Budget.[year] = ?,
+    dbo.Budget.[department] = ?,
+    dbo.Budget.[expense_category] = ?,
+    dbo.Budget.[budget_code] = ?,
+    dbo.Budget.[budget_name] = ?,
+    dbo.Budget.[budget_amounts] = ?,
+    dbo.Budget.[expenditure_amounts] = ?
+WHERE
+    dbo.Budget.[StagingID] = ?

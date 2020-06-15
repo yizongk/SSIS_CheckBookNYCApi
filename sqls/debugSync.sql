@@ -116,9 +116,52 @@ WHERE document_code = '[document_code]'
 GO
 
 
- delete From dbo.Contracts_Staging
- where document_code = '[document_code]_UPDATED'
+delete From dbo.Contracts_Staging
+where document_code = '[document_code]_UPDATED'
 
 
- delete From dbo.Contracts
- where document_code = '[document_code]_UPDATED'
+delete From dbo.Contracts
+where document_code = '[document_code]_UPDATED'
+
+
+-- Budget
+INSERT INTO dbo.Budget_Staging (
+      [LastUpdatedTimestamp]
+      ,[agency]
+      ,[year]
+      ,[department]
+      ,[expense_category]
+      ,[budget_code]
+      ,[budget_name]
+      ,[budget_amounts]
+      ,[expenditure_amounts]
+) VALUES (
+      GETDATE(),
+      '[agency]',
+      1111,
+      '[department]',
+      '[expense_category]',
+      '[budget_code]',
+      '[budget_name]',
+      '[budget_amounts]',
+      '[expenditure_amounts]'
+)
+
+UPDATE dbo.Budget_Staging
+SET
+      [LastUpdatedTimestamp] = GETDATE() -- This shouldn't trigger update-able condition, cuz it's never checked against, and doesn't need to be checked since it's a timestamp for the Staging Table, we will have our own timestamp for the final table
+      ,[agency] = '[agency]_UPDATED'
+      ,[year] = 9999
+      ,[department] = '[department]_UPDATED'
+      ,[expense_category] = '[expense_category]_UPDATED'
+      ,[budget_code] = '[budget_code]_UPDATED'
+      ,[budget_name] = '[budget_name]_UPDATED'
+      ,[budget_amounts] = '[budget_amounts]_UPDATED'
+      ,[expenditure_amounts] = '[expenditure_amounts]_UPDATED'
+WHERE [agency] = '[agency]'
+
+delete From dbo.Budget_Staging
+where agency = '[agency]_UPDATED'
+
+delete From dbo.Budget_Staging
+where agency = '[agency]_UPDATED'
