@@ -1,3 +1,4 @@
+-- Contracts
 INSERT INTO dbo.Contracts_Staging (
       [LastUpdatedTimestamp]
       ,[document_code]

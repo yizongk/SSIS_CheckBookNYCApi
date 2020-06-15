@@ -1,3 +1,4 @@
+-- Contracts
 CREATE TABLE [Contracts] (
         [ID] int IDENTITY(1,1) NOT NULL,
         CONSTRAINT [PK_Contracts_ID] PRIMARY KEY CLUSTERED (ID),
