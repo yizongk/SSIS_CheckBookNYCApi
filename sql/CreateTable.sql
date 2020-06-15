@@ -1,9 +1,9 @@
 CREATE TABLE [Contracts] (
         [ID] int IDENTITY(1,1) NOT NULL,
         CONSTRAINT [PK_Contracts_ID] PRIMARY KEY CLUSTERED (ID),
-        [StagingID] int NOT NULL, -- For syncing with the staging table, it's the FK to the staging table's [ID], it is enforced at the database level, and it should be enforce at the SSIS data sync level as well
-        CONSTRAINT [FK_Contracts_ContractsStaging_StagingID] FOREIGN KEY ([StagingID])
-                REFERENCES [dbo].[Contracts_Staging] ([ID]),
+        [StagingID] int NOT NULL, -- For syncing with the staging table, it's the FK to the staging table's [ID], but it is not enforced at the database level, but it should be enforce at the SSIS data sync level
+        -- CONSTRAINT [FK_Contracts_ContractsStaging_StagingID] FOREIGN KEY ([StagingID])  -- This is commented out since Sidney's job may decide to delete from the staging table, and this constraint may prevent his job from deleteing the record cuz it's a FK on dbo.Contracts. So not using it.
+        --         REFERENCES [dbo].[Contracts_Staging] ([ID]),
         [LastUpdatedTimestamp] datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
         [document_code] nvarchar(255),
         [prime_contract_id] nvarchar(255),
