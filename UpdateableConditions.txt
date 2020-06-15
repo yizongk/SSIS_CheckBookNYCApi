@@ -1,3 +1,5 @@
+# Contracts
+
 document_code_FINAL
 prime_contract_id_FINAL
 contract_includes_sub_vendors_FINAL
@@ -72,7 +74,7 @@ sub_contract_reference_id_STAGING
 
 
 # format and logic is this
-# ( !ISNULL(dest) && ISNULL(src) ) || ( ISNULL(dest) && !ISNULL(src) ) || ( !ISNULL(dest) && !ISNULL(src) && ( dest != src ) )
+# ( !ISNULL(_FINAL) && ISNULL(_STAGING) ) || ( ISNULL(_FINAL) && !ISNULL(_STAGING) ) || ( !ISNULL(_FINAL) && !ISNULL(_STAGING) && ( _FINAL != _STAGING ) )
 
 
    ( !ISNULL(document_code_FINAL) && ISNULL(document_code_STAGING) ) || ( ISNULL(document_code_FINAL) && !ISNULL(document_code_STAGING) ) || ( !ISNULL(document_code_FINAL) && !ISNULL(document_code_STAGING) && ( document_code_FINAL != document_code_STAGING ) )
@@ -111,4 +113,25 @@ sub_contract_reference_id_STAGING
 
 
 
+
+
+
+# Budget
+agency
+year
+department
+expense_category
+budget_code
+budget_name
+budget_amounts
+expenditure_amounts
+
+   ( !ISNULL(agency_FINAL) && ISNULL(agency_STAGING) ) || ( ISNULL(agency_FINAL) && !ISNULL(agency_STAGING) ) || ( !ISNULL(agency_FINAL) && !ISNULL(agency_STAGING) && ( agency_FINAL != agency_STAGING ) )
+|| ( !ISNULL(year_FINAL) && ISNULL(year_STAGING) ) || ( ISNULL(year_FINAL) && !ISNULL(year_STAGING) ) || ( !ISNULL(year_FINAL) && !ISNULL(year_STAGING) && ( year_FINAL != year_STAGING ) )
+|| ( !ISNULL(department_FINAL) && ISNULL(department_STAGING) ) || ( ISNULL(department_FINAL) && !ISNULL(department_STAGING) ) || ( !ISNULL(department_FINAL) && !ISNULL(department_STAGING) && ( department_FINAL != department_STAGING ) )
+|| ( !ISNULL(expense_category_FINAL) && ISNULL(expense_category_STAGING) ) || ( ISNULL(expense_category_FINAL) && !ISNULL(expense_category_STAGING) ) || ( !ISNULL(expense_category_FINAL) && !ISNULL(expense_category_STAGING) && ( expense_category_FINAL != expense_category_STAGING ) )
+|| ( !ISNULL(budget_code_FINAL) && ISNULL(budget_code_STAGING) ) || ( ISNULL(budget_code_FINAL) && !ISNULL(budget_code_STAGING) ) || ( !ISNULL(budget_code_FINAL) && !ISNULL(budget_code_STAGING) && ( budget_code_FINAL != budget_code_STAGING ) )
+|| ( !ISNULL(budget_name_FINAL) && ISNULL(budget_name_STAGING) ) || ( ISNULL(budget_name_FINAL) && !ISNULL(budget_name_STAGING) ) || ( !ISNULL(budget_name_FINAL) && !ISNULL(budget_name_STAGING) && ( budget_name_FINAL != budget_name_STAGING ) )
+|| ( !ISNULL(budget_amounts_FINAL) && ISNULL(budget_amounts_STAGING) ) || ( ISNULL(budget_amounts_FINAL) && !ISNULL(budget_amounts_STAGING) ) || ( !ISNULL(budget_amounts_FINAL) && !ISNULL(budget_amounts_STAGING) && ( budget_amounts_FINAL != budget_amounts_STAGING ) )
+|| ( !ISNULL(expenditure_amounts_FINAL) && ISNULL(expenditure_amounts_STAGING) ) || ( ISNULL(expenditure_amounts_FINAL) && !ISNULL(expenditure_amounts_STAGING) ) || ( !ISNULL(expenditure_amounts_FINAL) && !ISNULL(expenditure_amounts_STAGING) && ( expenditure_amounts_FINAL != expenditure_amounts_STAGING ) )
 
