@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{89D8CEA9-E4F8-4D90-97AE-0053C3B822F8}">
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{20127BBA-5A95-4134-AF5D-8AE5CB8249BA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -861,6 +861,102 @@
                       refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Data Conversion - NOT IN USER AT THE MOMENT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Data Conversion - NOT IN USER AT THE MOMENT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget)"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Delete records (Final - Budget)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM dbo.Budget
+WHERE dbo.Budget.[StagingID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DOTDEV55SQLEE03.CheckBookNYC]"
+                  connectionManagerRefId="Package.ConnectionManagers[DOTDEV55SQLEE03.CheckBookNYC]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Inputs[OLE DB Command Input].Columns[StagingID_FINAL]"
+                      cachedDataType="i4"
+                      cachedName="StagingID_FINAL"
+                      externalMetadataColumnId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Merge Join.Outputs[Merge Join Output].Columns[StagingID_FINAL]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4084,6 +4180,11 @@ WHERE
               endId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Conditional Split.Inputs[Conditional Split Input]"
               name="Data Conversion Output"
               startId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Data Conversion - NOT IN USER AT THE MOMENT.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final.Paths[Delete(StagingID_FINAL not Match any in ID_STAGING)]"
+              endId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget).Inputs[OLE DB Command Input]"
+              name="Delete(StagingID_FINAL not Match any in ID_STAGING)"
+              startId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Conditional Split.Outputs[Delete(StagingID_FINAL not Match any in ID_STAGING)]" />
             <path
               refId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final.Paths[Derived Column Output]"
               endId="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Replace any column that is &quot;-&quot; with NULL.Inputs[Input 0]"
@@ -15829,7 +15930,7 @@ WHERE
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-291.270390625,44.5,265.04078125,16"
+              BoundingBox="-282.54333984375,44.5,247.5866796875,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15885,7 +15986,47 @@ WHERE
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.23623046875,26.25,110.4724609375,16"
+              BoundingBox="-46.4115234375,28.4453125,92.823046875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Budget)"
+          TopLeft="1033,840" />
+        <EdgeLayout
+          Id="Package\Staging To Final - Budget - Convert Staging to appropriate data types and then Sync to Final.Paths[Delete(StagingID_FINAL not Match any in ID_STAGING)]"
+          TopLeft="849.25,758">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="295.75,82"
+              Start="0,0"
+              End="295.75,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2579281183932" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2579281183932"
+                    Point2="0,28.2579281183932"
+                    Point3="4,28.2579281183932" />
+                  <mssgle:LineSegment
+                    End="291.75,28.2579281183932" />
+                  <mssgle:CubicBezierSegment
+                    Point1="291.75,28.2579281183932"
+                    Point2="295.75,28.2579281183932"
+                    Point3="295.75,32.2579281183932" />
+                  <mssgle:LineSegment
+                    End="295.75,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="23.11326171875,33.2579281183932,249.5234765625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

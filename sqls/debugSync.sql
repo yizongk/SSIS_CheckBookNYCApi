@@ -71,9 +71,6 @@ INSERT INTO dbo.Contracts_Staging (
       ,'[sub_contract_reference_id]'
 )
 
-GO
-
-
 UPDATE dbo.Contracts_Staging
 SET
       [LastUpdatedTimestamp] = GETDATE() -- This shouldn't trigger update-able condition, cuz it's never checked against, and doesn't need to be checked since it's a timestamp for the Staging Table, we will have our own timestamp for the final table
@@ -112,15 +109,7 @@ SET
       ,[sub_contract_reference_id] = '[sub_contract_reference_id]_UPDATED'
 WHERE document_code = '[document_code]'
 
-
-GO
-
-
 delete From dbo.Contracts_Staging
-where document_code = '[document_code]_UPDATED'
-
-
-delete From dbo.Contracts
 where document_code = '[document_code]_UPDATED'
 
 
@@ -159,9 +148,6 @@ SET
       ,[budget_amounts] = '[budget_amounts]_UPDATED'
       ,[expenditure_amounts] = '[expenditure_amounts]_UPDATED'
 WHERE [agency] = '[agency]'
-
-delete From dbo.Budget_Staging
-where agency = '[agency]_UPDATED'
 
 delete From dbo.Budget_Staging
 where agency = '[agency]_UPDATED'
