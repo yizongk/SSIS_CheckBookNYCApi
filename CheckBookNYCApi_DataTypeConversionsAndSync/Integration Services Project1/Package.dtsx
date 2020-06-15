@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{227FD280-B217-4571-9730-D4C3AE1AB4D7}">
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{8946DB4A-68B1-4E7F-A334-7EFA5C21F208}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3642,10 +3642,412 @@
                   refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[document_code_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="document_code_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[document_code_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="document_code_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_id_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_id_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[contract_includes_sub_vendors_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="contract_includes_sub_vendors_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[vendor_record_type_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="vendor_record_type_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_vendor_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_vendor_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_vendor_mwbe_category_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_vendor_mwbe_category_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_purpose_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_purpose_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contracting_agency_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contracting_agency_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[parent_contract_id_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="parent_contract_id_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_type_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_type_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_award_method_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_award_method_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_expense_category_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="265"
+                      cachedName="prime_contract_expense_category_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_industry_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_industry_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_pin_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_pin_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_apt_pin_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_apt_pin_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_mwbe_category_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_mwbe_category_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_purpose_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="476"
+                      cachedName="sub_contract_purpose_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_status_in_pip_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_status_in_pip_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_industry_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_contract_industry_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_reference_id_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_contract_reference_id_STAGING"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_id_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_id_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[contract_includes_sub_vendors_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="contract_includes_sub_vendors_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[vendor_record_type_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="vendor_record_type_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_vendor_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_vendor_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_vendor_mwbe_category_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_vendor_mwbe_category_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_purpose_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_purpose_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_current_amount_FINAL]"
+                      cachedDataType="cy"
+                      cachedName="prime_contract_current_amount_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_current_amount_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_original_amount_FINAL]"
+                      cachedDataType="cy"
+                      cachedName="prime_contract_original_amount_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_original_amount_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_vendor_spent_to_date_FINAL]"
+                      cachedDataType="cy"
+                      cachedName="prime_vendor_spent_to_date_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_spent_to_date_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_start_date_FINAL]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_start_date_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_start_date_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_end_date_FINAL]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_end_date_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_end_date_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_registration_date_FINAL]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_registration_date_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_registration_date_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contracting_agency_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contracting_agency_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_version_FINAL]"
+                      cachedDataType="i4"
+                      cachedName="prime_contract_version_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_version_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[parent_contract_id_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="parent_contract_id_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_type_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_type_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_award_method_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_award_method_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_expense_category_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="265"
+                      cachedName="prime_contract_expense_category_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_industry_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_industry_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_pin_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_pin_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_apt_pin_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_apt_pin_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_mwbe_category_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_mwbe_category_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_purpose_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="476"
+                      cachedName="sub_contract_purpose_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_status_in_pip_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_status_in_pip_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_industry_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_contract_industry_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_current_amount_FINAL]"
+                      cachedDataType="cy"
+                      cachedName="sub_contract_current_amount_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_current_amount_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_original_amount_FINAL]"
+                      cachedDataType="cy"
+                      cachedName="sub_contract_original_amount_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_original_amount_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_paid_to_date_FINAL]"
+                      cachedDataType="cy"
+                      cachedName="sub_vendor_paid_to_date_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_paid_to_date_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_start_date_FINAL]"
+                      cachedDataType="dbDate"
+                      cachedName="sub_contract_start_date_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_start_date_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_end_date_FINAL]"
+                      cachedDataType="dbDate"
+                      cachedName="sub_contract_end_date_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_end_date_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_reference_id_FINAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_contract_reference_id_FINAL"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_FINAL]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="prime_contract_current_amount_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="prime_contract_original_amount_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="prime_vendor_spent_to_date_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_start_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_start_date_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_start_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_end_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_end_date_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_end_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_registration_date_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[prime_contract_version_STAGING_DataTypeConverted]"
+                      cachedDataType="i4"
+                      cachedName="prime_contract_version_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_version_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="sub_contract_current_amount_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="sub_contract_original_amount_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="sub_vendor_paid_to_date_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_start_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="sub_contract_start_date_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_start_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input].Columns[sub_contract_end_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="sub_contract_end_date_STAGING_DataTypeConverted"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_end_date_STAGING_DataTypeConverted]" />
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
+                <output
+                  refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Outputs[Update-able Records]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update-able Records"
+                  synchronousInputId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_current_amount_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_current_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_current_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_current_amount_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_original_amount_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_original_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_original_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_original_amount_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_spent_to_date_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_spent_to_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_spent_to_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_spent_to_date_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_start_date_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_start_date_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_start_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_start_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_start_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_start_date_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_start_date_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_start_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_end_date_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_end_date_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_end_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_end_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_end_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_end_date_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_end_date_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_end_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_registration_date_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_registration_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_registration_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_registration_date_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_version_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_version_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_version_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_version_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_version_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_version_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_version_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_version_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_current_amount_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_current_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_current_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_current_amount_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_original_amount_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_original_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_original_amount_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_original_amount_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_paid_to_date_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_paid_to_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_paid_to_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_paid_to_date_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_start_date_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_start_date_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_start_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_start_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_start_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_start_date_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_start_date_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_start_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_end_date_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_end_date_STAGING_DataTypeConverted]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_end_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_end_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_end_date_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_end_date_STAGING_DataTypeConverted]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_end_date_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_end_date_STAGING_DataTypeConverted]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_FINAL]}) &amp;&amp; [ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_STAGING]})) || ([ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_STAGING]})) || (![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_FINAL]}) &amp;&amp; ![ISNULL](#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_STAGING]}) &amp;&amp; (#{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_FINAL]} != #{Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_STAGING]}))</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(!ISNULL(document_code_FINAL) &amp;&amp; ISNULL(document_code_STAGING)) || (ISNULL(document_code_FINAL) &amp;&amp; !ISNULL(document_code_STAGING)) || (!ISNULL(document_code_FINAL) &amp;&amp; !ISNULL(document_code_STAGING) &amp;&amp; (document_code_FINAL != document_code_STAGING)) || (!ISNULL(prime_contract_id_FINAL) &amp;&amp; ISNULL(prime_contract_id_STAGING)) || (ISNULL(prime_contract_id_FINAL) &amp;&amp; !ISNULL(prime_contract_id_STAGING)) || (!ISNULL(prime_contract_id_FINAL) &amp;&amp; !ISNULL(prime_contract_id_STAGING) &amp;&amp; (prime_contract_id_FINAL != prime_contract_id_STAGING)) || (!ISNULL(contract_includes_sub_vendors_FINAL) &amp;&amp; ISNULL(contract_includes_sub_vendors_STAGING)) || (ISNULL(contract_includes_sub_vendors_FINAL) &amp;&amp; !ISNULL(contract_includes_sub_vendors_STAGING)) || (!ISNULL(contract_includes_sub_vendors_FINAL) &amp;&amp; !ISNULL(contract_includes_sub_vendors_STAGING) &amp;&amp; (contract_includes_sub_vendors_FINAL != contract_includes_sub_vendors_STAGING)) || (!ISNULL(vendor_record_type_FINAL) &amp;&amp; ISNULL(vendor_record_type_STAGING)) || (ISNULL(vendor_record_type_FINAL) &amp;&amp; !ISNULL(vendor_record_type_STAGING)) || (!ISNULL(vendor_record_type_FINAL) &amp;&amp; !ISNULL(vendor_record_type_STAGING) &amp;&amp; (vendor_record_type_FINAL != vendor_record_type_STAGING)) || (!ISNULL(prime_vendor_FINAL) &amp;&amp; ISNULL(prime_vendor_STAGING)) || (ISNULL(prime_vendor_FINAL) &amp;&amp; !ISNULL(prime_vendor_STAGING)) || (!ISNULL(prime_vendor_FINAL) &amp;&amp; !ISNULL(prime_vendor_STAGING) &amp;&amp; (prime_vendor_FINAL != prime_vendor_STAGING)) || (!ISNULL(prime_vendor_mwbe_category_FINAL) &amp;&amp; ISNULL(prime_vendor_mwbe_category_STAGING)) || (ISNULL(prime_vendor_mwbe_category_FINAL) &amp;&amp; !ISNULL(prime_vendor_mwbe_category_STAGING)) || (!ISNULL(prime_vendor_mwbe_category_FINAL) &amp;&amp; !ISNULL(prime_vendor_mwbe_category_STAGING) &amp;&amp; (prime_vendor_mwbe_category_FINAL != prime_vendor_mwbe_category_STAGING)) || (!ISNULL(prime_contract_purpose_FINAL) &amp;&amp; ISNULL(prime_contract_purpose_STAGING)) || (ISNULL(prime_contract_purpose_FINAL) &amp;&amp; !ISNULL(prime_contract_purpose_STAGING)) || (!ISNULL(prime_contract_purpose_FINAL) &amp;&amp; !ISNULL(prime_contract_purpose_STAGING) &amp;&amp; (prime_contract_purpose_FINAL != prime_contract_purpose_STAGING)) || (!ISNULL(prime_contract_current_amount_FINAL) &amp;&amp; ISNULL(prime_contract_current_amount_STAGING_DataTypeConverted)) || (ISNULL(prime_contract_current_amount_FINAL) &amp;&amp; !ISNULL(prime_contract_current_amount_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_current_amount_FINAL) &amp;&amp; !ISNULL(prime_contract_current_amount_STAGING_DataTypeConverted) &amp;&amp; (prime_contract_current_amount_FINAL != prime_contract_current_amount_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_original_amount_FINAL) &amp;&amp; ISNULL(prime_contract_original_amount_STAGING_DataTypeConverted)) || (ISNULL(prime_contract_original_amount_FINAL) &amp;&amp; !ISNULL(prime_contract_original_amount_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_original_amount_FINAL) &amp;&amp; !ISNULL(prime_contract_original_amount_STAGING_DataTypeConverted) &amp;&amp; (prime_contract_original_amount_FINAL != prime_contract_original_amount_STAGING_DataTypeConverted)) || (!ISNULL(prime_vendor_spent_to_date_FINAL) &amp;&amp; ISNULL(prime_vendor_spent_to_date_STAGING_DataTypeConverted)) || (ISNULL(prime_vendor_spent_to_date_FINAL) &amp;&amp; !ISNULL(prime_vendor_spent_to_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_vendor_spent_to_date_FINAL) &amp;&amp; !ISNULL(prime_vendor_spent_to_date_STAGING_DataTypeConverted) &amp;&amp; (prime_vendor_spent_to_date_FINAL != prime_vendor_spent_to_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_start_date_FINAL) &amp;&amp; ISNULL(prime_contract_start_date_STAGING_DataTypeConverted)) || (ISNULL(prime_contract_start_date_FINAL) &amp;&amp; !ISNULL(prime_contract_start_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_start_date_FINAL) &amp;&amp; !ISNULL(prime_contract_start_date_STAGING_DataTypeConverted) &amp;&amp; (prime_contract_start_date_FINAL != prime_contract_start_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_end_date_FINAL) &amp;&amp; ISNULL(prime_contract_end_date_STAGING_DataTypeConverted)) || (ISNULL(prime_contract_end_date_FINAL) &amp;&amp; !ISNULL(prime_contract_end_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_end_date_FINAL) &amp;&amp; !ISNULL(prime_contract_end_date_STAGING_DataTypeConverted) &amp;&amp; (prime_contract_end_date_FINAL != prime_contract_end_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_registration_date_FINAL) &amp;&amp; ISNULL(prime_contract_registration_date_STAGING_DataTypeConverted)) || (ISNULL(prime_contract_registration_date_FINAL) &amp;&amp; !ISNULL(prime_contract_registration_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_registration_date_FINAL) &amp;&amp; !ISNULL(prime_contract_registration_date_STAGING_DataTypeConverted) &amp;&amp; (prime_contract_registration_date_FINAL != prime_contract_registration_date_STAGING_DataTypeConverted)) || (!ISNULL(prime_contracting_agency_FINAL) &amp;&amp; ISNULL(prime_contracting_agency_STAGING)) || (ISNULL(prime_contracting_agency_FINAL) &amp;&amp; !ISNULL(prime_contracting_agency_STAGING)) || (!ISNULL(prime_contracting_agency_FINAL) &amp;&amp; !ISNULL(prime_contracting_agency_STAGING) &amp;&amp; (prime_contracting_agency_FINAL != prime_contracting_agency_STAGING)) || (!ISNULL(prime_contract_version_FINAL) &amp;&amp; ISNULL(prime_contract_version_STAGING_DataTypeConverted)) || (ISNULL(prime_contract_version_FINAL) &amp;&amp; !ISNULL(prime_contract_version_STAGING_DataTypeConverted)) || (!ISNULL(prime_contract_version_FINAL) &amp;&amp; !ISNULL(prime_contract_version_STAGING_DataTypeConverted) &amp;&amp; (prime_contract_version_FINAL != prime_contract_version_STAGING_DataTypeConverted)) || (!ISNULL(parent_contract_id_FINAL) &amp;&amp; ISNULL(parent_contract_id_STAGING)) || (ISNULL(parent_contract_id_FINAL) &amp;&amp; !ISNULL(parent_contract_id_STAGING)) || (!ISNULL(parent_contract_id_FINAL) &amp;&amp; !ISNULL(parent_contract_id_STAGING) &amp;&amp; (parent_contract_id_FINAL != parent_contract_id_STAGING)) || (!ISNULL(prime_contract_type_FINAL) &amp;&amp; ISNULL(prime_contract_type_STAGING)) || (ISNULL(prime_contract_type_FINAL) &amp;&amp; !ISNULL(prime_contract_type_STAGING)) || (!ISNULL(prime_contract_type_FINAL) &amp;&amp; !ISNULL(prime_contract_type_STAGING) &amp;&amp; (prime_contract_type_FINAL != prime_contract_type_STAGING)) || (!ISNULL(prime_contract_award_method_FINAL) &amp;&amp; ISNULL(prime_contract_award_method_STAGING)) || (ISNULL(prime_contract_award_method_FINAL) &amp;&amp; !ISNULL(prime_contract_award_method_STAGING)) || (!ISNULL(prime_contract_award_method_FINAL) &amp;&amp; !ISNULL(prime_contract_award_method_STAGING) &amp;&amp; (prime_contract_award_method_FINAL != prime_contract_award_method_STAGING)) || (!ISNULL(prime_contract_expense_category_FINAL) &amp;&amp; ISNULL(prime_contract_expense_category_STAGING)) || (ISNULL(prime_contract_expense_category_FINAL) &amp;&amp; !ISNULL(prime_contract_expense_category_STAGING)) || (!ISNULL(prime_contract_expense_category_FINAL) &amp;&amp; !ISNULL(prime_contract_expense_category_STAGING) &amp;&amp; (prime_contract_expense_category_FINAL != prime_contract_expense_category_STAGING)) || (!ISNULL(prime_contract_industry_FINAL) &amp;&amp; ISNULL(prime_contract_industry_STAGING)) || (ISNULL(prime_contract_industry_FINAL) &amp;&amp; !ISNULL(prime_contract_industry_STAGING)) || (!ISNULL(prime_contract_industry_FINAL) &amp;&amp; !ISNULL(prime_contract_industry_STAGING) &amp;&amp; (prime_contract_industry_FINAL != prime_contract_industry_STAGING)) || (!ISNULL(prime_contract_pin_FINAL) &amp;&amp; ISNULL(prime_contract_pin_STAGING)) || (ISNULL(prime_contract_pin_FINAL) &amp;&amp; !ISNULL(prime_contract_pin_STAGING)) || (!ISNULL(prime_contract_pin_FINAL) &amp;&amp; !ISNULL(prime_contract_pin_STAGING) &amp;&amp; (prime_contract_pin_FINAL != prime_contract_pin_STAGING)) || (!ISNULL(prime_contract_apt_pin_FINAL) &amp;&amp; ISNULL(prime_contract_apt_pin_STAGING)) || (ISNULL(prime_contract_apt_pin_FINAL) &amp;&amp; !ISNULL(prime_contract_apt_pin_STAGING)) || (!ISNULL(prime_contract_apt_pin_FINAL) &amp;&amp; !ISNULL(prime_contract_apt_pin_STAGING) &amp;&amp; (prime_contract_apt_pin_FINAL != prime_contract_apt_pin_STAGING)) || (!ISNULL(sub_vendor_FINAL) &amp;&amp; ISNULL(sub_vendor_STAGING)) || (ISNULL(sub_vendor_FINAL) &amp;&amp; !ISNULL(sub_vendor_STAGING)) || (!ISNULL(sub_vendor_FINAL) &amp;&amp; !ISNULL(sub_vendor_STAGING) &amp;&amp; (sub_vendor_FINAL != sub_vendor_STAGING)) || (!ISNULL(sub_vendor_mwbe_category_FINAL) &amp;&amp; ISNULL(sub_vendor_mwbe_category_STAGING)) || (ISNULL(sub_vendor_mwbe_category_FINAL) &amp;&amp; !ISNULL(sub_vendor_mwbe_category_STAGING)) || (!ISNULL(sub_vendor_mwbe_category_FINAL) &amp;&amp; !ISNULL(sub_vendor_mwbe_category_STAGING) &amp;&amp; (sub_vendor_mwbe_category_FINAL != sub_vendor_mwbe_category_STAGING)) || (!ISNULL(sub_contract_purpose_FINAL) &amp;&amp; ISNULL(sub_contract_purpose_STAGING)) || (ISNULL(sub_contract_purpose_FINAL) &amp;&amp; !ISNULL(sub_contract_purpose_STAGING)) || (!ISNULL(sub_contract_purpose_FINAL) &amp;&amp; !ISNULL(sub_contract_purpose_STAGING) &amp;&amp; (sub_contract_purpose_FINAL != sub_contract_purpose_STAGING)) || (!ISNULL(sub_vendor_status_in_pip_FINAL) &amp;&amp; ISNULL(sub_vendor_status_in_pip_STAGING)) || (ISNULL(sub_vendor_status_in_pip_FINAL) &amp;&amp; !ISNULL(sub_vendor_status_in_pip_STAGING)) || (!ISNULL(sub_vendor_status_in_pip_FINAL) &amp;&amp; !ISNULL(sub_vendor_status_in_pip_STAGING) &amp;&amp; (sub_vendor_status_in_pip_FINAL != sub_vendor_status_in_pip_STAGING)) || (!ISNULL(sub_contract_industry_FINAL) &amp;&amp; ISNULL(sub_contract_industry_STAGING)) || (ISNULL(sub_contract_industry_FINAL) &amp;&amp; !ISNULL(sub_contract_industry_STAGING)) || (!ISNULL(sub_contract_industry_FINAL) &amp;&amp; !ISNULL(sub_contract_industry_STAGING) &amp;&amp; (sub_contract_industry_FINAL != sub_contract_industry_STAGING)) || (!ISNULL(sub_contract_current_amount_FINAL) &amp;&amp; ISNULL(sub_contract_current_amount_STAGING_DataTypeConverted)) || (ISNULL(sub_contract_current_amount_FINAL) &amp;&amp; !ISNULL(sub_contract_current_amount_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_current_amount_FINAL) &amp;&amp; !ISNULL(sub_contract_current_amount_STAGING_DataTypeConverted) &amp;&amp; (sub_contract_current_amount_FINAL != sub_contract_current_amount_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_original_amount_FINAL) &amp;&amp; ISNULL(sub_contract_original_amount_STAGING_DataTypeConverted)) || (ISNULL(sub_contract_original_amount_FINAL) &amp;&amp; !ISNULL(sub_contract_original_amount_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_original_amount_FINAL) &amp;&amp; !ISNULL(sub_contract_original_amount_STAGING_DataTypeConverted) &amp;&amp; (sub_contract_original_amount_FINAL != sub_contract_original_amount_STAGING_DataTypeConverted)) || (!ISNULL(sub_vendor_paid_to_date_FINAL) &amp;&amp; ISNULL(sub_vendor_paid_to_date_STAGING_DataTypeConverted)) || (ISNULL(sub_vendor_paid_to_date_FINAL) &amp;&amp; !ISNULL(sub_vendor_paid_to_date_STAGING_DataTypeConverted)) || (!ISNULL(sub_vendor_paid_to_date_FINAL) &amp;&amp; !ISNULL(sub_vendor_paid_to_date_STAGING_DataTypeConverted) &amp;&amp; (sub_vendor_paid_to_date_FINAL != sub_vendor_paid_to_date_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_start_date_FINAL) &amp;&amp; ISNULL(sub_contract_start_date_STAGING_DataTypeConverted)) || (ISNULL(sub_contract_start_date_FINAL) &amp;&amp; !ISNULL(sub_contract_start_date_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_start_date_FINAL) &amp;&amp; !ISNULL(sub_contract_start_date_STAGING_DataTypeConverted) &amp;&amp; (sub_contract_start_date_FINAL != sub_contract_start_date_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_end_date_FINAL) &amp;&amp; ISNULL(sub_contract_end_date_STAGING_DataTypeConverted)) || (ISNULL(sub_contract_end_date_FINAL) &amp;&amp; !ISNULL(sub_contract_end_date_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_end_date_FINAL) &amp;&amp; !ISNULL(sub_contract_end_date_STAGING_DataTypeConverted) &amp;&amp; (sub_contract_end_date_FINAL != sub_contract_end_date_STAGING_DataTypeConverted)) || (!ISNULL(sub_contract_reference_id_FINAL) &amp;&amp; ISNULL(sub_contract_reference_id_STAGING)) || (ISNULL(sub_contract_reference_id_FINAL) &amp;&amp; !ISNULL(sub_contract_reference_id_STAGING)) || (!ISNULL(sub_contract_reference_id_FINAL) &amp;&amp; !ISNULL(sub_contract_reference_id_STAGING) &amp;&amp; (sub_contract_reference_id_FINAL != sub_contract_reference_id_STAGING))</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
                 <output
                   refId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
@@ -9650,6 +10052,760 @@ AA==]]></arrayElement>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts)"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update changed records (Final - Contracts)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE
+    dbo.Contracts
+SET
+    dbo.Contracts.[LastUpdatedTimestamp] = ?,
+    dbo.Contracts.[document_code] = ?,
+    dbo.Contracts.[prime_contract_id] = ?,
+    dbo.Contracts.[contract_includes_sub_vendors] = ?,
+    dbo.Contracts.[vendor_record_type] = ?,
+    dbo.Contracts.[prime_vendor] = ?,
+    dbo.Contracts.[prime_vendor_mwbe_category] = ?,
+    dbo.Contracts.[prime_contract_purpose] = ?,
+    dbo.Contracts.[prime_contract_current_amount] = ?,
+    dbo.Contracts.[prime_contract_original_amount] = ?,
+    dbo.Contracts.[prime_vendor_spent_to_date] = ?,
+    dbo.Contracts.[prime_contract_start_date] = ?,
+    dbo.Contracts.[prime_contract_end_date] = ?,
+    dbo.Contracts.[prime_contract_registration_date] = ?,
+    dbo.Contracts.[prime_contracting_agency] = ?,
+    dbo.Contracts.[prime_contract_version] = ?,
+    dbo.Contracts.[parent_contract_id] = ?,
+    dbo.Contracts.[prime_contract_type] = ?,
+    dbo.Contracts.[prime_contract_award_method] = ?,
+    dbo.Contracts.[prime_contract_expense_category] = ?,
+    dbo.Contracts.[prime_contract_industry] = ?,
+    dbo.Contracts.[prime_contract_pin] = ?,
+    dbo.Contracts.[prime_contract_apt_pin] = ?,
+    dbo.Contracts.[sub_vendor] = ?,
+    dbo.Contracts.[sub_vendor_mwbe_category] = ?,
+    dbo.Contracts.[sub_contract_purpose] = ?,
+    dbo.Contracts.[sub_vendor_status_in_pip] = ?,
+    dbo.Contracts.[sub_contract_industry] = ?,
+    dbo.Contracts.[sub_contract_current_amount] = ?,
+    dbo.Contracts.[sub_contract_original_amount] = ?,
+    dbo.Contracts.[sub_vendor_paid_to_date] = ?,
+    dbo.Contracts.[sub_contract_start_date] = ?,
+    dbo.Contracts.[sub_contract_end_date] = ?,
+    dbo.Contracts.[sub_contract_reference_id] = ?
+WHERE
+    dbo.Contracts.[StagingID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DOTDEV55SQLEE03.CheckBookNYC]"
+                  connectionManagerRefId="Package.ConnectionManagers[DOTDEV55SQLEE03.CheckBookNYC]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[LastUpdatedTimestamp_Derived]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LastUpdatedTimestamp_Derived"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Derive Current Datetime for Final Contracts table.Outputs[Derived Column Output].Columns[LastUpdatedTimestamp_Derived]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[document_code_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="document_code_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[document_code_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_id_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_id_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[contract_includes_sub_vendors_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="contract_includes_sub_vendors_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[contract_includes_sub_vendors_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[vendor_record_type_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="vendor_record_type_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[vendor_record_type_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_vendor_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_vendor_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_vendor_mwbe_category_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_vendor_mwbe_category_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_vendor_mwbe_category_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_purpose_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_purpose_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_purpose_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contracting_agency_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contracting_agency_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contracting_agency_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[parent_contract_id_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="parent_contract_id_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[parent_contract_id_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_type_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_type_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_type_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_award_method_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_award_method_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_award_method_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_expense_category_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="265"
+                      cachedName="prime_contract_expense_category_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_expense_category_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_industry_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_industry_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_industry_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_pin_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_pin_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_pin_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_apt_pin_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_apt_pin_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_22]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_apt_pin_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_vendor_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_23]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_vendor_mwbe_category_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_mwbe_category_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_24]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_mwbe_category_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_contract_purpose_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="476"
+                      cachedName="sub_contract_purpose_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_25]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_purpose_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_vendor_status_in_pip_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_vendor_status_in_pip_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_26]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_vendor_status_in_pip_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_contract_industry_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_contract_industry_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_27]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_industry_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_contract_reference_id_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sub_contract_reference_id_STAGING"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_33]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[sub_contract_reference_id_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="prime_contract_current_amount_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_current_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="prime_contract_original_amount_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_original_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="prime_vendor_spent_to_date_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_vendor_spent_to_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_start_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_start_date_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_start_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_end_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_end_date_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_end_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="prime_contract_registration_date_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_registration_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[prime_contract_version_STAGING_DataTypeConverted]"
+                      cachedDataType="i4"
+                      cachedName="prime_contract_version_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[prime_contract_version_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="sub_contract_current_amount_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_28]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_current_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="sub_contract_original_amount_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_29]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_original_amount_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]"
+                      cachedDataType="cy"
+                      cachedName="sub_vendor_paid_to_date_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_30]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_vendor_paid_to_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_contract_start_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="sub_contract_start_date_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_31]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_start_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[sub_contract_end_date_STAGING_DataTypeConverted]"
+                      cachedDataType="dbDate"
+                      cachedName="sub_contract_end_date_STAGING_DataTypeConverted"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_32]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_end_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[ID_STAGING]"
+                      cachedDataType="i4"
+                      cachedName="ID_STAGING"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_34]"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join.Outputs[Merge Join Output].Columns[ID_STAGING]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="cy"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      dataType="cy"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      dataType="cy"
+                      name="Param_10">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      dataType="dbDate"
+                      name="Param_11">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      dataType="dbDate"
+                      name="Param_12">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      dataType="dbDate"
+                      name="Param_13">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_14">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
+                      dataType="i4"
+                      name="Param_15">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_16">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_17">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_18">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
+                      dataType="wstr"
+                      length="265"
+                      name="Param_19">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_20">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_21">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_22]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_22">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_23]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_23">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_24]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_24">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_25]"
+                      dataType="wstr"
+                      length="476"
+                      name="Param_25">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_26]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_26">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_27]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_27">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_28]"
+                      dataType="cy"
+                      name="Param_28">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_29]"
+                      dataType="cy"
+                      name="Param_29">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_30]"
+                      dataType="cy"
+                      name="Param_30">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_31]"
+                      dataType="dbDate"
+                      name="Param_31">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_32]"
+                      dataType="dbDate"
+                      name="Param_32">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_33]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_33">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_34]"
+                      dataType="i4"
+                      name="Param_34">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -9702,6 +10858,11 @@ AA==]]></arrayElement>
               endId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Inputs[Conditional Split Input]"
               name="Update(ID Match)"
               startId="Package\Staging To Final - Convert all the columns to appropriate data types\Conditional Split.Outputs[Update(ID Match)]" />
+            <path
+              refId="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Update-able Records]"
+              endId="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts).Inputs[OLE DB Command Input]"
+              name="Update-able Records"
+              startId="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record.Outputs[Update-able Records]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9736,14 +10897,6 @@ AA==]]></arrayElement>
           Id="Package\Staging To Final - Convert all the columns to appropriate data types\Contracts_Staging - Sort ID ASC"
           TopLeft="369,181" />
         <NodeLayout
-          Size="210,42"
-          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Staging - Contracts_Staging"
-          TopLeft="371,71" />
-        <NodeLayout
-          Size="309,42"
-          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Derive Current Datetime for Final Contracts table"
-          TopLeft="495,428" />
-        <NodeLayout
           Size="130,42"
           Id="Package\Staging To Final - Convert all the columns to appropriate data types\Merge Join"
           TopLeft="580,307" />
@@ -9752,9 +10905,21 @@ AA==]]></arrayElement>
           Id="Package\Staging To Final - Convert all the columns to appropriate data types\Insert records (Final - Contracts)"
           TopLeft="124.5,866.5" />
         <NodeLayout
+          Size="309,42"
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Derive Current Datetime for Final Contracts table"
+          TopLeft="495,428" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record"
+          TopLeft="572,870" />
+        <NodeLayout
           Size="156,42"
           Id="Package\Staging To Final - Convert all the columns to appropriate data types\Data Conversion"
           TopLeft="570,595" />
+        <NodeLayout
+          Size="273,42"
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Replace any column that is &quot;-&quot; with NULL"
+          TopLeft="517,520" />
         <NodeLayout
           Size="190,42"
           Id="Package\Staging To Final - Convert all the columns to appropriate data types\Contracts - Sort ID ASC"
@@ -9768,51 +10933,31 @@ AA==]]></arrayElement>
           Id="Package\Staging To Final - Convert all the columns to appropriate data types\Conditional Split"
           TopLeft="570,677" />
         <NodeLayout
-          Size="273,42"
-          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Replace any column that is &quot;-&quot; with NULL"
-          TopLeft="517,520" />
+          Size="210,42"
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Staging - Contracts_Staging"
+          TopLeft="371,71" />
         <EdgeLayout
-          Id="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Derived Column Output]"
-          TopLeft="651.5,470">
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Update(ID Match)]"
+          TopLeft="670,719">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="0,151"
               Start="0,0"
-              End="0,42.5">
+              End="0,143.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,143.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Data Conversion Output]"
-          TopLeft="647.75,637">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-40.04068359375,65.9453125,80.0813671875,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10019,62 +11164,81 @@ AA==]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="192,42"
-          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Find Update-able record"
-          TopLeft="557,872" />
         <EdgeLayout
-          Id="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Update(ID Match)]"
-          TopLeft="672,719">
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Derived Column Output]"
+          TopLeft="651.5,470">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-19,153"
+              EndConnector="0,50"
               Start="0,0"
-              End="-19,145.5">
+              End="0,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.1379310344828" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,58.1379310344828"
-                    Point2="0,62.1379310344828"
-                    Point3="-4,62.1379310344828" />
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Data Conversion Output]"
+          TopLeft="647.75,637">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-15,62.1379310344828" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15,62.1379310344828"
-                    Point2="-19,62.1379310344828"
-                    Point3="-19,66.1379310344828" />
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="282,42"
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types\Update changed records (Final - Contracts)"
+          TopLeft="531,968" />
+        <EdgeLayout
+          Id="Package\Staging To Final - Convert all the columns to appropriate data types.Paths[Update-able Records]"
+          TopLeft="670,912">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-19,145.5" />
+                    End="0,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-49.54068359375,67.1379310344828,80.0813671875,11.609375"
+              BoundingBox="-55.23623046875,16.25,110.4724609375,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Staging To Final - Convert all the columns to appropriate data types\Staging - Contracts_Staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Staging To Final - Convert all the columns to appropriate data types\Insert records (Final - Contracts)">
     <Properties>
@@ -10090,6 +11254,19 @@ AA==]]></arrayElement>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Staging To Final - Convert all the columns to appropriate data types\Final - Contracts">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Staging To Final - Convert all the columns to appropriate data types\Staging - Contracts_Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
