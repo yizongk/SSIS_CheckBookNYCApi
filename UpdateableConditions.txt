@@ -135,3 +135,20 @@ expenditure_amounts
 || ( !ISNULL(budget_amounts_FINAL) && ISNULL(budget_amounts_STAGING) ) || ( ISNULL(budget_amounts_FINAL) && !ISNULL(budget_amounts_STAGING) ) || ( !ISNULL(budget_amounts_FINAL) && !ISNULL(budget_amounts_STAGING) && ( budget_amounts_FINAL != budget_amounts_STAGING ) )
 || ( !ISNULL(expenditure_amounts_FINAL) && ISNULL(expenditure_amounts_STAGING) ) || ( ISNULL(expenditure_amounts_FINAL) && !ISNULL(expenditure_amounts_STAGING) ) || ( !ISNULL(expenditure_amounts_FINAL) && !ISNULL(expenditure_amounts_STAGING) && ( expenditure_amounts_FINAL != expenditure_amounts_STAGING ) )
 
+
+# Spending
+[ID]
+,[contract_id]
+,[contract_purpose]
+,[check_amount]
+,[department]
+,[document_id]
+,[expense_category]
+,[fiscal_year]
+,[industry]
+,[issue_date]
+,[mwbe_category]
+,[payee_name]
+,[spending_category]
+,[sub_contract_reference_id]
+,[sub_vendor]

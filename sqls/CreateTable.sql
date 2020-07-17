@@ -57,7 +57,33 @@ CREATE TABLE [Budget] (
         [expenditure_amounts] nvarchar(255)
 );
 
-
+-- Spending
+CREATE TABLE [Spending] (
+        [ID] int IDENTITY(1,1) NOT NULL,
+        CONSTRAINT [PK_Spending_ID] PRIMARY KEY CLUSTERED (ID),
+        [StagingID] int NOT NULL, -- For syncing with the staging table, it's the FK to the staging table's [ID], but it is not enforced at the database level, but it should be enforce at the SSIS data sync level
+        [LastUpdatedTimestamp] datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        [agency] nvarchar(255),
+        [associated_prime_vendor] nvarchar(255),
+        [capital_project] nvarchar(255),
+        [contract_id] nvarchar(255),
+        [contract_purpose] nvarchar(255),
+        [check_amount] money,
+        [department] nvarchar(255),
+        [document_id] nvarchar(255),
+        [expense_category] nvarchar(255),
+        [fiscal_year] int,
+        [industry] nvarchar(255),
+        [issue_date] date,
+        [mwbe_category] nvarchar(255),
+        [payee_name] nvarchar(255),
+        [spending_category] nvarchar(255),
+        [sub_contract_reference_id] nvarchar(255),
+        [sub_vendor] nvarchar(255),
+        [Code] nvarchar(255), -- Not in Spending_Staging
+        [Dept] nvarchar(255), -- Not in Spending_Staging
+        [Registration] nvarchar(255) -- Not in Spending_Staging
+);
 
 
 
@@ -106,26 +132,4 @@ CREATE TABLE [Budget] (
 --         [calendar_year] int
 -- );
 
--- CREATE TABLE [Spending] (
---         [ID] int IDENTITY(1,1) NOT NULL,
---         CONSTRAINT [PK_Spending_ID] PRIMARY KEY CLUSTERED (ID),
---         [StagingID] int NOT NULL, -- For syncing with the staging table, it's the FK to the staging table's [ID], but it is not enforced at the database level, but it should be enforce at the SSIS data sync level
---         [LastUpdatedTimestamp] datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
---         [agency] nvarchar(255),
---         [associated_prime_vendor] nvarchar(255),
---         [capital_project] nvarchar(255),
---         [contract_id] nvarchar(255),
---         [contract_purpose] nvarchar(255),
---         [check_amount] money,
---         [department] nvarchar(255),
---         [document_id] nvarchar(255),
---         [expense_category] nvarchar(255),
---         [fiscal_year] int,
---         [industry] nvarchar(255),
---         [issue_date] date,
---         [mwbe_category] nvarchar(255),
---         [payee_name] nvarchar(255),
---         [spending_category] nvarchar(255),
---         [sub_contract_reference_id] nvarchar(255),
---         [sub_vendor] nvarchar(255)
--- );
+
