@@ -125,113 +125,113 @@ public class ScriptMain : UserComponent
             {
                 if (contractid.Substring(0,3) == "CT1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,3);
-                    Row.DeptSTAGING = contractid.Substring(3,3);
-                    Row.RegistrationSTAGING = contractid.Substring(6,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6,11);
                 }
                 else if (contractid.Substring(0,3) == "DO1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,3);
-                    Row.DeptSTAGING = contractid.Substring(3,3);
-                    Row.RegistrationSTAGING = contractid.Substring(6,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6,11);
                 }
                 else if (contractid.Substring(0,4) == "CTA1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,4) == "RCT1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,4) == "MMA1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,4) == "PON1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,3) == "POC")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,3);
-                    Row.DeptSTAGING = contractid.Substring(3,3);
-                    Row.RegistrationSTAGING = contractid.Substring(6,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6,11);
                 }
                 else if (contractid.Substring(0,3) == "POD")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,3);
-                    Row.DeptSTAGING = contractid.Substring(3,3);
-                    Row.RegistrationSTAGING = contractid.Substring(6, 11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6, 11);
                 }
                 else if (contractid.Substring(0,4) == "PRC2")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,4) == "CTA2")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,4) == "PCC1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,4) == "PRM1")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,4);
-                    Row.DeptSTAGING = contractid.Substring(4,3);
-                    Row.RegistrationSTAGING = contractid.Substring(7,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7,11);
                 }
                 else if (contractid.Substring(0,5) == "RTGPF")
                 {
-                    Row.CodeSTAGING = contractid.Substring(0,5);
-                    Row.DeptSTAGING = contractid.Substring(5,3);
-                    Row.RegistrationSTAGING = contractid.Substring(8,11);
+                    Row.CodeSTAGINGDerived = contractid.Substring(0,5);
+                    Row.DeptSTAGINGDerived = contractid.Substring(5,3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(8,11);
                 }
                 else
                 {
-                    Row.CodeSTAGING = "ERROR: [contract_id] doesn't match any valid contract_id prefix";
-                    Row.DeptSTAGING = "ERROR: [contract_id] doesn't match any valid contract_id prefix";
-                    Row.RegistrationSTAGING = "ERROR: [contract_id] doesn't match any valid contract_id prefix";
+                    Row.CodeSTAGINGDerived = "ERROR: [contractid] doesn't match any valid contractid prefix";
+                    Row.DeptSTAGINGDerived = "ERROR: [contractid] doesn't match any valid contractid prefix";
+                    Row.RegistrationSTAGINGDerived = "ERROR: [contractid] doesn't match any valid contractid prefix";
                 }
 
             }
             else if (contractid != null && contractid.Length < 17) 
             {
-                Row.CodeSTAGING = "ERROR: contractid.Length is less than 17";
-                Row.DeptSTAGING = "ERROR: contractid.Length is less than 17";
-                Row.RegistrationSTAGING = "ERROR: contractid.Length is less than 17";
+                Row.CodeSTAGINGDerived = "ERROR: contractid.Length is less than 17";
+                Row.DeptSTAGINGDerived = "ERROR: contractid.Length is less than 17";
+                Row.RegistrationSTAGINGDerived = "ERROR: contractid.Length is less than 17";
             }
             else if (contractid == null)
             {
-                Row.CodeSTAGING = null;
-                Row.DeptSTAGING = null;
-                Row.RegistrationSTAGING = null;
+                Row.CodeSTAGINGDerived = null;
+                Row.DeptSTAGINGDerived = null;
+                Row.RegistrationSTAGINGDerived = null;
             }
             else
             {
-                Row.CodeSTAGING = "ERROR: contract_id is not null, but unsure how to process it";
-                Row.DeptSTAGING = "ERROR: contract_id is not null, but unsure how to process it";
-                Row.RegistrationSTAGING = "ERROR: contract_id is not null, but unsure how to process it";
+                Row.CodeSTAGINGDerived = "ERROR: contractid is not null, but unsure how to process it";
+                Row.DeptSTAGINGDerived = "ERROR: contractid is not null, but unsure how to process it";
+                Row.RegistrationSTAGINGDerived = "ERROR: contractid is not null, but unsure how to process it";
             }
         }
         catch (Exception ex) {
-            Row.CodeSTAGING = "ERROR: an exception has occured";
-            Row.DeptSTAGING = "ERROR: an exception has occured";
-            Row.RegistrationSTAGING = "ERROR: an exception has occured";
+            Row.CodeSTAGINGDerived = "ERROR: an exception has occured";
+            Row.DeptSTAGINGDerived = "ERROR: an exception has occured";
+            Row.RegistrationSTAGINGDerived = "ERROR: an exception has occured";
             //MessageBox.Show(ex.ToString());
         }
     }

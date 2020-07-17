@@ -137,16 +137,15 @@ expenditure_amounts
 
 
 # Spending
-( !ISNULL(ID_FINAL) && ISNULL(ID) ) || ( ISNULL(ID_FINAL) && !ISNULL(ID) ) || ( !ISNULL(ID_FINAL) && !ISNULL(ID) && ( ID_FINAL != ID ) )
-|| ( !ISNULL(contract_id_FINAL) && ISNULL(contract_id) ) || ( ISNULL(contract_id_FINAL) && !ISNULL(contract_id) ) || ( !ISNULL(contract_id_FINAL) && !ISNULL(contract_id) && ( contract_id_FINAL != contract_id ) )
+( !ISNULL(contract_id_FINAL) && ISNULL(contract_id) ) || ( ISNULL(contract_id_FINAL) && !ISNULL(contract_id) ) || ( !ISNULL(contract_id_FINAL) && !ISNULL(contract_id) && ( contract_id_FINAL != contract_id ) )
 || ( !ISNULL(contract_purpose_FINAL) && ISNULL(contract_purpose) ) || ( ISNULL(contract_purpose_FINAL) && !ISNULL(contract_purpose) ) || ( !ISNULL(contract_purpose_FINAL) && !ISNULL(contract_purpose) && ( contract_purpose_FINAL != contract_purpose ) )
-|| ( !ISNULL(check_amount_FINAL) && ISNULL(check_amount) ) || ( ISNULL(check_amount_FINAL) && !ISNULL(check_amount) ) || ( !ISNULL(check_amount_FINAL) && !ISNULL(check_amount) && ( check_amount_FINAL != check_amount ) )
+|| ( !ISNULL(check_amount_FINAL) && ISNULL(check_amount_DataTypeConverted) ) || ( ISNULL(check_amount_FINAL) && !ISNULL(check_amount_DataTypeConverted) ) || ( !ISNULL(check_amount_FINAL) && !ISNULL(check_amount_DataTypeConverted) && ( check_amount_FINAL != check_amount ) )
 || ( !ISNULL(department_FINAL) && ISNULL(department) ) || ( ISNULL(department_FINAL) && !ISNULL(department) ) || ( !ISNULL(department_FINAL) && !ISNULL(department) && ( department_FINAL != department ) )
 || ( !ISNULL(document_id_FINAL) && ISNULL(document_id) ) || ( ISNULL(document_id_FINAL) && !ISNULL(document_id) ) || ( !ISNULL(document_id_FINAL) && !ISNULL(document_id) && ( document_id_FINAL != document_id ) )
 || ( !ISNULL(expense_category_FINAL) && ISNULL(expense_category) ) || ( ISNULL(expense_category_FINAL) && !ISNULL(expense_category) ) || ( !ISNULL(expense_category_FINAL) && !ISNULL(expense_category) && ( expense_category_FINAL != expense_category ) )
-|| ( !ISNULL(fiscal_year_FINAL) && ISNULL(fiscal_year) ) || ( ISNULL(fiscal_year_FINAL) && !ISNULL(fiscal_year) ) || ( !ISNULL(fiscal_year_FINAL) && !ISNULL(fiscal_year) && ( fiscal_year_FINAL != fiscal_year ) )
+|| ( !ISNULL(fiscal_year_FINAL) && ISNULL(fiscal_year_DataTypeConverted) ) || ( ISNULL(fiscal_year_FINAL) && !ISNULL(fiscal_year_DataTypeConverted) ) || ( !ISNULL(fiscal_year_FINAL) && !ISNULL(fiscal_year_DataTypeConverted) && ( fiscal_year_FINAL != fiscal_year ) )
 || ( !ISNULL(industry_FINAL) && ISNULL(industry) ) || ( ISNULL(industry_FINAL) && !ISNULL(industry) ) || ( !ISNULL(industry_FINAL) && !ISNULL(industry) && ( industry_FINAL != industry ) )
-|| ( !ISNULL(issue_date_FINAL) && ISNULL(issue_date) ) || ( ISNULL(issue_date_FINAL) && !ISNULL(issue_date) ) || ( !ISNULL(issue_date_FINAL) && !ISNULL(issue_date) && ( issue_date_FINAL != issue_date ) )
+|| ( !ISNULL(issue_date_FINAL) && ISNULL(issue_date_DataTypeConverted) ) || ( ISNULL(issue_date_FINAL) && !ISNULL(issue_date_DataTypeConverted) ) || ( !ISNULL(issue_date_FINAL) && !ISNULL(issue_date_DataTypeConverted) && ( issue_date_FINAL != issue_date ) )
 || ( !ISNULL(mwbe_category_FINAL) && ISNULL(mwbe_category) ) || ( ISNULL(mwbe_category_FINAL) && !ISNULL(mwbe_category) ) || ( !ISNULL(mwbe_category_FINAL) && !ISNULL(mwbe_category) && ( mwbe_category_FINAL != mwbe_category ) )
 || ( !ISNULL(payee_name_FINAL) && ISNULL(payee_name) ) || ( ISNULL(payee_name_FINAL) && !ISNULL(payee_name) ) || ( !ISNULL(payee_name_FINAL) && !ISNULL(payee_name) && ( payee_name_FINAL != payee_name ) )
 || ( !ISNULL(spending_category_FINAL) && ISNULL(spending_category) ) || ( ISNULL(spending_category_FINAL) && !ISNULL(spending_category) ) || ( !ISNULL(spending_category_FINAL) && !ISNULL(spending_category) && ( spending_category_FINAL != spending_category ) )

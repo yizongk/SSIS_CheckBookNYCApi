@@ -151,3 +151,37 @@ WHERE [agency] = '[agency]'
 
 delete From dbo.Budget_Staging
 where agency = '[agency]_UPDATED'
+
+
+-- Spending
+INSERT INTO dbo.Spending_Staging (
+      [LastUpdatedTimestamp]
+) VALUES (
+      GETDATE()
+)
+
+UPDATE
+    dbo.Spending_Staging
+SET
+    dbo.Spending_Staging.[agency] = 'Ab',
+    dbo.Spending_Staging.[associated_prime_vendor] = 'b',
+    dbo.Spending_Staging.[capital_project] = 'c',
+    dbo.Spending_Staging.[contract_id] = 'e',
+    dbo.Spending_Staging.[contract_purpose] = 'f',
+    dbo.Spending_Staging.[check_amount] = '100',
+    dbo.Spending_Staging.[department] = 'g',
+    dbo.Spending_Staging.[document_id] = 'h',
+    dbo.Spending_Staging.[expense_category] = 'i',
+    dbo.Spending_Staging.[fiscal_year] = '2020',
+    dbo.Spending_Staging.[industry] = 'j',
+    dbo.Spending_Staging.[issue_date] = '2020-07-04',
+    dbo.Spending_Staging.[mwbe_category] = 'k',
+    dbo.Spending_Staging.[payee_name] = 'l',
+    dbo.Spending_Staging.[spending_category] = 'm',
+    dbo.Spending_Staging.[sub_contract_reference_id] = 'n',
+    dbo.Spending_Staging.[sub_vendor] = 'o'
+WHERE
+    dbo.Spending_Staging.[ID] = 717232
+
+delete From dbo.Spending_Staging
+where ID = 717232

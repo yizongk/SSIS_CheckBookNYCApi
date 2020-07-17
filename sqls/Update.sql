@@ -57,3 +57,32 @@ SET
     dbo.Budget.[expenditure_amounts] = ?
 WHERE
     dbo.Budget.[StagingID] = ?
+
+
+-- Spending
+UPDATE
+    dbo.Spending
+SET
+    dbo.Spending.[LastUpdatedTimestamp] = ?,
+    dbo.Spending.[agency] = ?,
+    dbo.Spending.[associated_prime_vendor] = ?,
+    dbo.Spending.[capital_project] = ?,
+    dbo.Spending.[contract_id] = ?,
+    dbo.Spending.[contract_purpose] = ?,
+    dbo.Spending.[check_amount] = ?,
+    dbo.Spending.[department] = ?,
+    dbo.Spending.[document_id] = ?,
+    dbo.Spending.[expense_category] = ?,
+    dbo.Spending.[fiscal_year] = ?,
+    dbo.Spending.[industry] = ?,
+    dbo.Spending.[issue_date] = ?,
+    dbo.Spending.[mwbe_category] = ?,
+    dbo.Spending.[payee_name] = ?,
+    dbo.Spending.[spending_category] = ?,
+    dbo.Spending.[sub_contract_reference_id] = ?,
+    dbo.Spending.[sub_vendor] = ?,
+    dbo.Spending.[Code] = ?,
+    dbo.Spending.[Dept] = ?,
+    dbo.Spending.[Registration] = ?
+WHERE
+    dbo.Spending.[StagingID] = ?
