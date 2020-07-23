@@ -83,6 +83,9 @@ SET
     dbo.Spending.[sub_vendor] = ?,
     dbo.Spending.[Code] = ?,
     dbo.Spending.[Dept] = ?,
-    dbo.Spending.[Registration] = ?
+    dbo.Spending.[Registration] = ?,
+    dbo.Spending.[ProjectAgency] = ?,
+    dbo.Spending.[CapProj] = ?,
+    dbo.Spending.[Occ] = ?
 WHERE
     dbo.Spending.[StagingID] = ?

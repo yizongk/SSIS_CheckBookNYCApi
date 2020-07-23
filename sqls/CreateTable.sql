@@ -82,7 +82,10 @@ CREATE TABLE [Spending] (
         [sub_vendor] nvarchar(255),
         [Code] nvarchar(255), -- Not in Spending_Staging
         [Dept] nvarchar(255), -- Not in Spending_Staging
-        [Registration] nvarchar(255) -- Not in Spending_Staging
+        [Registration] nvarchar(255), -- Not in Spending_Staging
+        [ProjectAgency] nvarchar(255), -- Not in Spending_Staging
+        [CapProj] nvarchar(255), -- Not in Spending_Staging
+        [Occ] nvarchar(255) -- Not in Spending_Staging
 );
 
 
