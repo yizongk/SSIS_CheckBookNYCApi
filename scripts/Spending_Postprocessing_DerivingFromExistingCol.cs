@@ -121,85 +121,85 @@ public class ScriptMain : UserComponent
         string contractid = Row.contractid;
         try
         {
-            if (contractid != null && contractid.Length >= 17)
+            if (contractid != null && contractid.Length >= 9)
             {
                 if (contractid.Substring(0, 3) == "CT1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
                     Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(6, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
                 }
                 else if (contractid.Substring(0, 4) == "CTA1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(7, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 3) == "DO1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
                     Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(6, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
                 }
                 else if (contractid.Substring(0, 4) == "MMA1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(8, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(8);
                 }
                 else if (contractid.Substring(0, 4) == "RCT1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(7, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 4) == "PRC2")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(7, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 3) == "POD")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
                     Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(6, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
                 }
                 else if (contractid.Substring(0, 3) == "POC")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
                     Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(6, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
                 }
                 else if (contractid.Substring(0, 4) == "PON1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(7, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 4) == "PRM1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(7, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 4) == "PCC1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(7, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 4) == "CTA2")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(7, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 5) == "RTGPF")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 5);
                     Row.DeptSTAGINGDerived = contractid.Substring(5, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(8, 11);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(8);
                 }
                 else
                 {
@@ -209,7 +209,7 @@ public class ScriptMain : UserComponent
                 }
 
             }
-            else if (contractid != null && contractid.Length < 17)
+            else if (contractid != null && contractid.Length < 9)
             {
                 Row.CodeSTAGINGDerived = "N/A";
                 Row.DeptSTAGINGDerived = "N/A";
