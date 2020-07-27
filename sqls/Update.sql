@@ -35,7 +35,10 @@ SET
     dbo.Contracts.[sub_vendor_paid_to_date] = ?,
     dbo.Contracts.[sub_contract_start_date] = ?,
     dbo.Contracts.[sub_contract_end_date] = ?,
-    dbo.Contracts.[sub_contract_reference_id] = ?
+    dbo.Contracts.[sub_contract_reference_id] = ?,
+    dbo.Contracts.[prime_code] = ?,
+    dbo.Contracts.[prime_dept] = ?,
+    dbo.Contracts.[prime_registration] = ?
 WHERE
     dbo.Contracts.[StagingID] = ?
 

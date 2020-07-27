@@ -38,7 +38,10 @@ CREATE TABLE [Contracts] (
         [sub_vendor_paid_to_date] money,
         [sub_contract_start_date] date,
         [sub_contract_end_date] date,
-        [sub_contract_reference_id] nvarchar(255)
+        [sub_contract_reference_id] nvarchar(255),
+        [prime_code] nvarchar(255), -- Not in Contracts_Staging
+        [prime_dept] nvarchar(255), -- Not in Contracts_Staging
+        [prime_registration] nvarchar(255) -- Not in Contracts_Staging
 );
 
 -- Budget

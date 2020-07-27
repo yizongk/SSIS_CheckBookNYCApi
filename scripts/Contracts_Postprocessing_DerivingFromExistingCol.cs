@@ -11,7 +11,6 @@ using System;
 using System.Data;
 using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
 using Microsoft.SqlServer.Dts.Runtime.Wrapper;
-using System.Windows.Forms;
 #endregion
 
 /// <summary>
@@ -118,7 +117,7 @@ public class ScriptMain : UserComponent
         /*
          * Add your code here
          */
-        string contractid = Row.contractid;
+        string contractid = Row.primecontractidSTAGING;
         try
         {
             if (contractid != null && contractid.Length >= 9)
@@ -235,40 +234,6 @@ public class ScriptMain : UserComponent
             Row.RegistrationSTAGINGDerived = "ERROR: an exception has occured";
             //MessageBox.Show(ex.ToString());
         }
-
-        string capital_project = Row.capitalproject;
-        try
-        {
-            if (capital_project != null && capital_project.Length >= 13)
-            {
-                Row.ProjectAgencySTAGINGDerived = capital_project.Substring(0, 3);
-                Row.CapProjSTAGINGDerived = capital_project.Substring(3, 9).TrimEnd();
-                Row.OccSTAGINGDerived = capital_project.Substring(Math.Max(0, capital_project.Length - 3));
-            }
-            else if (capital_project != null && capital_project.Length < 13)
-            {
-                Row.ProjectAgencySTAGINGDerived = "N/A";
-                Row.CapProjSTAGINGDerived = "N/A";
-                Row.OccSTAGINGDerived = "N/A";
-            }
-            else if (capital_project == null)
-            {
-                Row.ProjectAgencySTAGINGDerived = null;
-                Row.CapProjSTAGINGDerived = null;
-                Row.OccSTAGINGDerived = null;
-            }
-            else
-            {
-                Row.ProjectAgencySTAGINGDerived = "N/A";
-                Row.CapProjSTAGINGDerived = "N/A";
-                Row.OccSTAGINGDerived = "N/A";
-            }
-        }
-        catch (Exception ex)
-        {
-            Row.ProjectAgencySTAGINGDerived = "ERROR: an exception has occured";
-            Row.CapProjSTAGINGDerived = "ERROR: an exception has occured";
-            Row.OccSTAGINGDerived = "ERROR: an exception has occured";
-        }
     }
+
 }

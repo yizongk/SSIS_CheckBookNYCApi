@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="139"
-  DTS:VersionGUID="{FAA20F9D-FC98-4656-84F9-9F7E48092F65}">
+  DTS:VersionBuild="147"
+  DTS:VersionGUID="{3F133B61-FAFA-4979-8DC8-7C6C88E585C2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -7079,6 +7079,1111 @@ WHERE dbo.Contracts.[StagingID] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;9"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Derive Code, Dept, and Registration for Final Contracts table"
+              version="9">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        /*
+         * Add your code here
+         */
+        string contractid = Row.primecontractidSTAGING;
+        try
+        {
+            if (contractid != null && contractid.Length >= 9)
+            {
+                if (contractid.Substring(0, 3) == "CT1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
+                }
+                else if (contractid.Substring(0, 4) == "CTA1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 3) == "DO1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
+                }
+                else if (contractid.Substring(0, 4) == "MMA1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 4) == "RCT1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 4) == "PRC2")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 3) == "POD")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
+                }
+                else if (contractid.Substring(0, 3) == "POC")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(6);
+                }
+                else if (contractid.Substring(0, 4) == "PON1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 4) == "PRM1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 4) == "PCC1")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 4) == "CTA2")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
+                }
+                else if (contractid.Substring(0, 5) == "RTGPF")
+                {
+                    Row.CodeSTAGINGDerived = contractid.Substring(0, 5);
+                    Row.DeptSTAGINGDerived = contractid.Substring(5, 3);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(8);
+                }
+                else
+                {
+                    Row.CodeSTAGINGDerived = "N/A";
+                    Row.DeptSTAGINGDerived = "N/A";
+                    Row.RegistrationSTAGINGDerived = "N/A";
+                }
+
+            }
+            else if (contractid != null && contractid.Length < 9)
+            {
+                Row.CodeSTAGINGDerived = "N/A";
+                Row.DeptSTAGINGDerived = "N/A";
+                Row.RegistrationSTAGINGDerived = "N/A";
+            }
+            else if (contractid == null)
+            {
+                Row.CodeSTAGINGDerived = null;
+                Row.DeptSTAGINGDerived = null;
+                Row.RegistrationSTAGINGDerived = null;
+            }
+            else
+            {
+                Row.CodeSTAGINGDerived = "N/A";
+                Row.DeptSTAGINGDerived = "N/A";
+                Row.RegistrationSTAGINGDerived = "N/A";
+            }
+        }
+        catch (Exception ex)
+        {
+            Row.CodeSTAGINGDerived = "ERROR: an exception has occured";
+            Row.DeptSTAGINGDerived = "ERROR: an exception has occured";
+            Row.RegistrationSTAGINGDerived = "ERROR: an exception has occured";
+            //MessageBox.Show(ex.ToString());
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String primecontractidSTAGING
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool primecontractidSTAGING_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String RegistrationSTAGINGDerived
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool RegistrationSTAGINGDerived_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String DeptSTAGINGDerived
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool DeptSTAGINGDerived_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String CodeSTAGINGDerived
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool CodeSTAGINGDerived_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fde36916989d446b8a484b213dcf533d.Properties.Settings.get_Default():SC_fde36916989d446b8a484b213dcf533d.Properties.Sett" +
+    "ings")]
+
+namespace SC_fde36916989d446b8a484b213dcf533d.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_fde36916989d446b8a484b213dcf533d.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ea126c3e-945b-400f-9cd6-befd223ae95b}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_fde36916989d446b8a484b213dcf533d</RootNamespace>
+    <AssemblyName>SC_fde36916989d446b8a484b213dcf533d</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_fde36916989d446b8a484b213dcf533d" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC120</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_fde36916989d446b8a484b213dcf533d</msb:CodeName>
+		<msb:DisplayName>SC_fde36916989d446b8a484b213dcf533d</msb:DisplayName>
+		<msb:ProjectId>{971174AB-3BB2-42CA-98BB-9A4A7CABDD19}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_fde36916989d446b8a484b213dcf533d.csproj"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_fde36916989d446b8a484b213dcf533d")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_fde36916989d446b8a484b213dcf533d")]
+[assembly: AssemblyCopyright("Copyright @  2020")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fde36916989d446b8a484b213dcf533d.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fde36916989d446b8a484b213dcf533d.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fde36916989d446b8a484b213dcf533d.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_fde36916989d446b8a484b213dcf533d.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_fde36916989d446b8a484b213dcf533d.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_fde36916989d446b8a484b213dcf533d.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMErH18AAAAAAAAAAOAAAiELAQsAABoAAAAIAAAAAAAAvjkA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAGQ5AABXAAAAAEAAAAgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAxBkAAAAgAAAAGgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAAgEAAAAQAAAAAYAAAAcAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACg
+OQAAAAAAAEgAAAACAAUA+CYAAGwSAAABAAAAAAAAAEAmAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAH4CKA0AAAoCAnMUAAAGfQEAAAQCAnMVAAAGfQIAAAQqkgRy
+AQAAcBpvDgAACiwVAgUCAygPAAAKDgRzCQAABm8DAAAGKkorBwIDbwQAAAYDbxIAAAYt8SoGKh4C
+KBEAAAoqHgIoEgAACioAABswBAApBAAAAQAAEQNvCgAABgoGOYoDAAAGbxMAAAofCT99AwAABhYZ
+bxQAAApyEQAAcCgVAAAKLC4DBhYZbxQAAApvEAAABgMGGRlvFAAACm8OAAAGAwYcbxYAAApvDAAA
+BjimAwAABhYabxQAAApyGQAAcCgVAAAKLC4DBhYabxQAAApvEAAABgMGGhlvFAAACm8OAAAGAwYd
+bxYAAApvDAAABjhkAwAABhYZbxQAAApyIwAAcCgVAAAKLC4DBhYZbxQAAApvEAAABgMGGRlvFAAA
+Cm8OAAAGAwYcbxYAAApvDAAABjgiAwAABhYabxQAAApyKwAAcCgVAAAKLC4DBhYabxQAAApvEAAA
+BgMGGhlvFAAACm8OAAAGAwYdbxYAAApvDAAABjjgAgAABhYabxQAAApyNQAAcCgVAAAKLC4DBhYa
+bxQAAApvEAAABgMGGhlvFAAACm8OAAAGAwYdbxYAAApvDAAABjieAgAABhYabxQAAApyPwAAcCgV
+AAAKLC4DBhYabxQAAApvEAAABgMGGhlvFAAACm8OAAAGAwYdbxYAAApvDAAABjhcAgAABhYZbxQA
+AApySQAAcCgVAAAKLC4DBhYZbxQAAApvEAAABgMGGRlvFAAACm8OAAAGAwYcbxYAAApvDAAABjga
+AgAABhYZbxQAAApyUQAAcCgVAAAKLC4DBhYZbxQAAApvEAAABgMGGRlvFAAACm8OAAAGAwYcbxYA
+AApvDAAABjjYAQAABhYabxQAAApyWQAAcCgVAAAKLC4DBhYabxQAAApvEAAABgMGGhlvFAAACm8O
+AAAGAwYdbxYAAApvDAAABjiWAQAABhYabxQAAApyYwAAcCgVAAAKLC4DBhYabxQAAApvEAAABgMG
+GhlvFAAACm8OAAAGAwYdbxYAAApvDAAABjhUAQAABhYabxQAAApybQAAcCgVAAAKLC4DBhYabxQA
+AApvEAAABgMGGhlvFAAACm8OAAAGAwYdbxYAAApvDAAABjgSAQAABhYabxQAAApydwAAcCgVAAAK
+LC4DBhYabxQAAApvEAAABgMGGhlvFAAACm8OAAAGAwYdbxYAAApvDAAABjjQAAAABhYbbxQAAApy
+gQAAcCgVAAAKLC4DBhYbbxQAAApvEAAABgMGGxlvFAAACm8OAAAGAwYebxYAAApvDAAABjiOAAAA
+A3KNAABwbxAAAAYDco0AAHBvDgAABgNyjQAAcG8MAAAGK2sGLC0GbxMAAAofCS8jA3KNAABwbxAA
+AAYDco0AAHBvDgAABgNyjQAAcG8MAAAGKzsGLRcDFG8QAAAGAxRvDgAABgMUbwwAAAYrIQNyjQAA
+cG8QAAAGA3KNAABwbw4AAAYDco0AAHBvDAAABt4kJgNylQAAcG8QAAAGA3KVAABwbw4AAAYDcpUA
+AHBvDAAABt4AKgAAAEEcAAAAAAAABwAAAP0DAAAEBAAAJAAAABgAAAEeAigBAAAGKioCAwQFKBcA
+AAoqUgJ7GAAACgJ7GQAAChaUbxoAAAoqIgIWKBsAAAoqJgIXAygcAAAKKloDLAgCFygdAAAKKnLV
+AABwcx4AAAp6JgIYAygcAAAKKloDLAgCGCgdAAAKKnLVAABwcx4AAAp6JgIZAygcAAAKKloDLAgC
+GSgdAAAKKnLVAABwcx4AAAp6HgIoHwAACioeAiggAAAKKjoCKCEAAAoCA30DAAAEKjoCKCEAAAoC
+A30EAAAEKh4CKCEAAAoqAAATMAIALQAAAAIAABF+BQAABC0gcnIBAHDQBwAAAigjAAAKbyQAAApz
+JQAACgoGgAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcAAAQqLnMbAAAGgAcAAAQqHgIoKAAA
+CioAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2Nv
+cmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3
+N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAA
+AAAAAABQQURQQURQtAAAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAAwGAAAj
+fgAAeAYAAEwIAAAjU3RyaW5ncwAAAADEDgAA5AEAACNVUwCoEAAAEAAAACNHVUlEAAAAuBAAALQB
+AAAjQmxvYgAAAAAAAAACAAABVxWiAQkBAAAA+iUzABYAAAEAAAAgAAAACAAAAAcAAAAcAAAAEwAA
+ACgAAAAPAAAAAgAAAAMAAAALAAAADAAAAAEAAAAEAAAAAQAAAAAACgABAAAAAAAGAO4AzQAGAP4A
+zQAKABsBFAEOADcBIgESAHYBzQAGAIUBzQAKAM8DvgMKAAAE6wMKANkEvwQKAAQF8gQKABsF8gQK
+ADgF8gQKAFcF8gQKAHAF8gQKAIkF8gQKAKQF8gQKAL8F8gQKANgF8gQKABEG8QUKADEG8QUKAHMG
+FAEKAHoGFAEGAKMGzQAKAOsGFAEKABcHFAEKAEQHMQcKAGEHFAEKAGYHFAEKAIoH8gQOALYHoAcO
+AM8HoAcKAOQH8QUAAAAAAQAAAAAAAQABAAEAEAAyAAAABQABAAEAAQAQAEAAAAAIAAMABQABABAA
+SwAAAAkAAwAJAAEAEABYAAAADQADABQAAQAQAGQAAAANAAQAFQAAABAAbgB4AA0ABQAWAAABEACn
+AHgAEQAHABoABgBYABMABgBkABcAAQCuA1MAAQCuA1MAEQDfA10AEQAMBGEAEQBQBH8AUCAAAAAA
+hhhPARsAAQBwIAAAAADGAJMBHwABAJUgAAAAAMYBoAEpAAUAqCAAAAAAxgG0ASkABgCqIAAAAADG
+AMsBGwAHALIgAAAAAMYA1gEbAAcAvCAAAAAAxgC0ASkABwAQJQAAAACGGE8BGwAIABglAAAAAIYY
+TwEvAAgAIyUAAAAAhgjiATkACwA4JQAAAACGCP0BPQALAEElAAAAAIYIHwJBAAsASyUAAAAAhgg+
+AkYADABiJQAAAACGCGQCQQANAGwlAAAAAIYIewJGAA4AgyUAAAAAhgiZAkEADwCNJQAAAACGCLAC
+RgAQAKQlAAAAAIYAzgI9ABEArCUAAAAAhgDWAj0AEQC0JQAAAACGGE8BVwARAMMlAAAAAIYYTwFX
+ABIA0iUAAAAAgxhPARsAEwDcJQAAAACTCBwEZQATABUmAAAAAJMIMARqABMAHCYAAAAAkwg8BG8A
+EwAkJgAAAACWCGAEgwAUADcmAAAAAIYYTwEbABQAKyYAAAAAkRj/B/cAFAAAAAEAdAQAAAIAfAQA
+AAMAhgQAAAQAjQQAAAEAhgQAAAEAlwQAAAEAlwQAAAEAhgQAAAIAmwQAAAMAjQQAAAEArwQAAAEA
+rwQAAAEArwQAAAEArwQAAAEArwQAAAEArwQAAAEAtQQAAAEAtQQAAAEArwRJAE8BQQBRAE8BQQBZ
+AE8BQQBhAE8BQQBpAE8BQQBxAE8BQQB5AE8BQQCBAE8BQQCJAE8BQQCRAE8BQQCZAE8BjQChAE8B
+GwAJAE8BGwCpAIsGkgAJAJIGmQC5AE8BGwAJAMsBGwAJANYBGwCpAMoGpACpANUGqACpAN8GrgCp
+ANUGtAARAE8BLwARAIYEvQARAJsEwQApAPUGtAARAP8GxQARAAYHygARAA8HjQDJAE8BQQARAM4C
+PQARANYCPQAZAE8BGwDRAE8BGwDZAHgH0ADZAJMH1wA5AE8B3ADxAE8B6AABAU8BGwAhAE8BGwAu
+ABsAbAEuAGMAkgEuAAsA+wAuABMAQwEuACMAbAEuACsAbAEuADMAQwEuADsAcgEuAEMAbAEuAFsA
+iQFjAIMAnwDhADsBnwDjABMBnwApATMB7gBJATMB7gC5AOMABAABAAcACQAIAAsAAADiAksAAAD5
+Ak8AAAAXA0sAAAAyA08AAABUA0sAAABnA08AAACBA0sAAACUA08AAADPA3UAAABIBHoAAABsBIgA
+AgAKAAMAAgALAAUAAQAMAAcAAQANAAkAAQAOAAsAAQAPAA0AAQAQAA8AAQARABEAAgAXABMAAgAY
+ABUAAQAZABUAAgAaABcABIAAAAEAAABZHThmAAAAAAAATwYAAAwAAAAAAAAAAAAAAAEAsAAAAAAA
+BAAAAAAAAAAAAAAACgALAQAAAAAEAAAAAAAAAAAAAAAKABQBAAAAAAwAAAAAAAAAAAAAAAEAVQEA
+AAAAAAAAAAEAAAAGCAAAAAAAAAA8TW9kdWxlPgBTQ19mZGUzNjkxNjk4OWQ0NDZiOGE0ODRiMjEz
+ZGNmNTMzZC5kbGwAVXNlckNvbXBvbmVudABTY3JpcHRNYWluAElucHV0MEJ1ZmZlcgBDb25uZWN0
+aW9ucwBWYXJpYWJsZXMAUmVzb3VyY2VzAFNDX2ZkZTM2OTE2OTg5ZDQ0NmI4YTQ4NGIyMTNkY2Y1
+MzNkLlByb3BlcnRpZXMAU2V0dGluZ3MATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNy
+b3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZQBTY3JpcHRDb21wb25lbnQAU2NyaXB0QnVmZmVy
+AG1zY29ybGliAFN5c3RlbQBPYmplY3QAU3lzdGVtLkNvbmZpZ3VyYXRpb24AQXBwbGljYXRpb25T
+ZXR0aW5nc0Jhc2UALmN0b3IATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QAUGlwZWxp
+bmVCdWZmZXIAT3V0cHV0TmFtZU1hcABQcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dABJ
+bnB1dDBfUHJvY2Vzc0lucHV0Um93AFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAZ2V0X3ByaW1lY29u
+dHJhY3RpZFNUQUdJTkcAZ2V0X3ByaW1lY29udHJhY3RpZFNUQUdJTkdfSXNOdWxsAHNldF9SZWdp
+c3RyYXRpb25TVEFHSU5HRGVyaXZlZABzZXRfUmVnaXN0cmF0aW9uU1RBR0lOR0Rlcml2ZWRfSXNO
+dWxsAHNldF9EZXB0U1RBR0lOR0Rlcml2ZWQAc2V0X0RlcHRTVEFHSU5HRGVyaXZlZF9Jc051bGwA
+c2V0X0NvZGVTVEFHSU5HRGVyaXZlZABzZXRfQ29kZVNUQUdJTkdEZXJpdmVkX0lzTnVsbABOZXh0
+Um93AEVuZE9mUm93c2V0AHByaW1lY29udHJhY3RpZFNUQUdJTkcAcHJpbWVjb250cmFjdGlkU1RB
+R0lOR19Jc051bGwAUmVnaXN0cmF0aW9uU1RBR0lOR0Rlcml2ZWQAUmVnaXN0cmF0aW9uU1RBR0lO
+R0Rlcml2ZWRfSXNOdWxsAERlcHRTVEFHSU5HRGVyaXZlZABEZXB0U1RBR0lOR0Rlcml2ZWRfSXNO
+dWxsAENvZGVTVEFHSU5HRGVyaXZlZABDb2RlU1RBR0lOR0Rlcml2ZWRfSXNOdWxsAFBhcmVudENv
+bXBvbmVudABTeXN0ZW0uUmVzb3VyY2VzAFJlc291cmNlTWFuYWdlcgByZXNvdXJjZU1hbgBTeXN0
+ZW0uR2xvYmFsaXphdGlvbgBDdWx0dXJlSW5mbwByZXNvdXJjZUN1bHR1cmUAZ2V0X1Jlc291cmNl
+TWFuYWdlcgBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQBDdWx0dXJlAGRlZmF1bHRJbnN0YW5jZQBn
+ZXRfRGVmYXVsdABEZWZhdWx0AElucHV0SUQASW5wdXROYW1lAEJ1ZmZlcgBPdXRwdXRNYXAAUm93
+AEJ1ZmZlckNvbHVtbkluZGV4ZXMAdmFsdWUAQ29tcG9uZW50AFN5c3RlbS5SdW50aW1lLlZlcnNp
+b25pbmcAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAFN5c3RlbS5SZWZsZWN0aW9uAEFzc2VtYmx5
+VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBBc3NlbWJseUNvbmZp
+Z3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAEFzc2VtYmx5UHJvZHVj
+dEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0
+dHJpYnV0ZQBBc3NlbWJseUN1bHR1cmVBdHRyaWJ1dGUAQXNzZW1ibHlWZXJzaW9uQXR0cmlidXRl
+AFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0
+dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBTQ19mZGUzNjkxNjk4OWQ0NDZi
+OGE0ODRiMjEzZGNmNTMzZABTdHJpbmcAU3RyaW5nQ29tcGFyaXNvbgBFcXVhbHMAR2V0Q29sdW1u
+SW5kZXhlcwBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBnZXRfTGVuZ3Ro
+AFN1YnN0cmluZwBvcF9FcXVhbGl0eQBFeGNlcHRpb24AR2V0U3RyaW5nAElzTnVsbABzZXRfSXRl
+bQBTZXROdWxsAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AU3lzdGVtLkRpYWdub3N0aWNzAERl
+YnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUAVHlwZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBl
+RnJvbUhhbmRsZQBBc3NlbWJseQBnZXRfQXNzZW1ibHkAU3lzdGVtLkNvbXBvbmVudE1vZGVsAEVk
+aXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVy
+YXRlZEF0dHJpYnV0ZQAuY2N0b3IAU0NfZmRlMzY5MTY5ODlkNDQ2YjhhNDg0YjIxM2RjZjUzM2Qu
+UHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAAAAAAAPSQBuAHAAdQB0ACAAMAAAB0MAVAAx
+AAAJQwBUAEEAMQAAB0QATwAxAAAJTQBNAEEAMQAACVIAQwBUADEAAAlQAFIAQwAyAAAHUABPAEQA
+AAdQAE8AQwAACVAATwBOADEAAAlQAFIATQAxAAAJUABDAEMAMQAACUMAVABBADIAAAtSAFQARwBQ
+AEYAAAdOAC8AQQAAP0UAUgBSAE8AUgA6ACAAYQBuACAAZQB4AGMAZQBwAHQAaQBvAG4AIABoAGEA
+cwAgAG8AYwBjAHUAcgBlAGQAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEA
+bgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAg
+AGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEA
+ZAAuAABxUwBDAF8AZgBkAGUAMwA2ADkAMQA2ADkAOAA5AGQANAA0ADYAYgA4AGEANAA4ADQAYgAy
+ADEAMwBkAGMAZgA1ADMAMwBkAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMA
+ZQBzAADmetlP+rJVTpmwxqVavb/YAAiJhF3NgIDMkQi3elxWGTTgiQMGEhQDBhIYAyAAAQkgBAEI
+DhIVEhkFIAEBEhAJIAMBEhUdCBIZAyAADgMgAAIEIAEBDgQgAQECAygADgMoAAIDBhIFBSABARIF
+AwYSHQMGEiEEAAASHQQAABIhBQABARIhBAgAEh0ECAASIQMGEiAEAAASIAQIABIgBCABAQgGIAIC
+DhFZBSABHQgIBAEAAAADIAAIBSACDggIBQACAg4OBCABDggDBwEOAwYSFQMGHQgEIAECCAUgAgEI
+HAYAARJtEXEEIAASdQYgAgEOEnUEBwESHQUgAQERfQgBAAIAAAAAAAMAAAFHAQAaLk5FVEZyYW1l
+d29yayxWZXJzaW9uPXY0LjABAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEC5ORVQgRnJhbWV3b3Jr
+IDQoAQAjU0NfZmRlMzY5MTY5ODlkNDQ2YjhhNDg0YjIxM2RjZjUzM2QAAAUBAAAAABYBABFDb3B5
+cmlnaHQgQCAgMjAyMAAACAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQAA
+AIw5AAAAAAAAAAAAAK45AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgOQAAAAAAAAAAAAAAAAAA
+AAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAA
+AFhAAACwAwAAAAAAAAAAAACwAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAA
+vQTv/gAAAQAAAAEAOGZZHQAAAQA4ZlkdPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAAB
+AFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAA
+AAAAALAEEAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAA7AIAAAEAMAAwADAAMAAw
+ADQAYgAwAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAQwBfAGYA
+ZABlADMANgA5ADEANgA5ADgAOQBkADQANAA2AGIAOABhADQAOAA0AGIAMgAxADMAZABjAGYANQAz
+ADMAZAAAAEAADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgA3ADUAMQAzAC4A
+MgA2ADEANgA4AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAGYAZABl
+ADMANgA5ADEANgA5ADgAOQBkADQANAA2AGIAOABhADQAOAA0AGIAMgAxADMAZABjAGYANQAzADMA
+ZAAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQBy
+AGkAZwBoAHQAIABAACAAIAAyADAAMgAwAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUA
+bgBhAG0AZQAAAFMAQwBfAGYAZABlADMANgA5ADEANgA5ADgAOQBkADQANAA2AGIAOABhADQAOAA0
+AGIAMgAxADMAZABjAGYANQAzADMAZAAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEA
+bQBlAAAAAABTAEMAXwBmAGQAZQAzADYAOQAxADYAOQA4ADkAZAA0ADQANgBiADgAYQA0ADgANABi
+ADIAMQAzAGQAYwBmADUAMwAzAGQAAABEAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4A
+AAAxAC4AMAAuADcANQAxADMALgAyADYAMQA2ADgAAAAAAEgADwABAEEAcwBzAGUAbQBiAGwAeQAg
+AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADcANQAxADMALgAyADYAMQA2ADgAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAwDkAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_fde36916989d446b8a484b213dcf533d</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">da8cfeb6743ca6080437250ae036c70e</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataShaChecksum"
+                  typeConverter="NOTBROWSABLE">c78b29979211644fb59f22053dccf8231561d8a0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Inputs[Input 0].Columns[prime_contract_id_STAGING]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="prime_contract_id_STAGING"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Merge Join.Outputs[Merge Join Output].Columns[prime_contract_id_STAGING]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[RegistrationSTAGINGDerived]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[RegistrationSTAGINGDerived]"
+                      name="RegistrationSTAGINGDerived" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[DeptSTAGINGDerived]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[DeptSTAGINGDerived]"
+                      name="DeptSTAGINGDerived" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[CodeSTAGINGDerived]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[CodeSTAGINGDerived]"
+                      name="CodeSTAGINGDerived" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Current Datetime for Final Contracts table"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -7548,6 +8653,36 @@ WHERE dbo.Contracts.[StagingID] = ?</property>
                       lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].Columns[StagingID]"
                       name="StagingID"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].Columns[prime_code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].ExternalColumns[prime_code]"
+                      length="255"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].Columns[prime_code]"
+                      name="prime_code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].Columns[prime_dept]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].ExternalColumns[prime_dept]"
+                      length="255"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].Columns[prime_dept]"
+                      name="prime_dept"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].Columns[prime_registration]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].ExternalColumns[prime_registration]"
+                      length="255"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].Columns[prime_registration]"
+                      name="prime_registration"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7716,6 +8851,21 @@ WHERE dbo.Contracts.[StagingID] = ?</property>
                       refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].ExternalColumns[StagingID]"
                       dataType="i4"
                       name="StagingID" />
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].ExternalColumns[prime_code]"
+                      dataType="wstr"
+                      length="255"
+                      name="prime_code" />
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].ExternalColumns[prime_dept]"
+                      dataType="wstr"
+                      length="255"
+                      name="prime_dept" />
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output].ExternalColumns[prime_registration]"
+                      dataType="wstr"
+                      length="255"
+                      name="prime_registration" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -7925,6 +9075,24 @@ WHERE dbo.Contracts.[StagingID] = ?</property>
                       lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[prime_code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[prime_code]"
+                      name="prime_code" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[prime_dept]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[prime_dept]"
+                      name="prime_dept" />
+                    <outputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[prime_registration]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[prime_registration]"
+                      name="prime_registration" />
                     <outputColumn
                       refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
@@ -8696,6 +9864,27 @@ WHERE dbo.Contracts.[StagingID] = ?</property>
                       cachedName="sub_contract_end_date_STAGING_DataTypeConverted"
                       externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[sub_contract_end_date]"
                       lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Data Conversion.Outputs[Data Conversion Output].Columns[sub_contract_end_date_STAGING_DataTypeConverted]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].Columns[CodeSTAGINGDerived]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CodeSTAGINGDerived"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[prime_code]"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[CodeSTAGINGDerived]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].Columns[DeptSTAGINGDerived]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DeptSTAGINGDerived"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[prime_dept]"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[DeptSTAGINGDerived]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].Columns[RegistrationSTAGINGDerived]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="RegistrationSTAGINGDerived"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[prime_registration]"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[RegistrationSTAGINGDerived]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8864,6 +10053,21 @@ WHERE dbo.Contracts.[StagingID] = ?</property>
                       refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[StagingID]"
                       dataType="i4"
                       name="StagingID" />
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[prime_code]"
+                      dataType="wstr"
+                      length="255"
+                      name="prime_code" />
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[prime_dept]"
+                      dataType="wstr"
+                      length="255"
+                      name="prime_dept" />
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000.Inputs[OLE DB Destination Input].ExternalColumns[prime_registration]"
+                      dataType="wstr"
+                      length="255"
+                      name="prime_registration" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -14412,7 +15616,10 @@ SET
     dbo.Contracts.[sub_vendor_paid_to_date] = ?,
     dbo.Contracts.[sub_contract_start_date] = ?,
     dbo.Contracts.[sub_contract_end_date] = ?,
-    dbo.Contracts.[sub_contract_reference_id] = ?
+    dbo.Contracts.[sub_contract_reference_id] = ?,
+    dbo.Contracts.[prime_code] = ?,
+    dbo.Contracts.[prime_dept] = ?,
+    dbo.Contracts.[prime_registration] = ?
 WHERE
     dbo.Contracts.[StagingID] = ?</property>
                 <property
@@ -14666,8 +15873,29 @@ WHERE
                       cachedDataType="i4"
                       cachedName="ID_STAGING"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_34]"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_37]"
                       lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Merge Join.Outputs[Merge Join Output].Columns[ID_STAGING]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[CodeSTAGINGDerived]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CodeSTAGINGDerived"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_34]"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[CodeSTAGINGDerived]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[DeptSTAGINGDerived]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DeptSTAGINGDerived"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_35]"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[DeptSTAGINGDerived]" />
+                    <inputColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].Columns[RegistrationSTAGINGDerived]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="RegistrationSTAGINGDerived"
+                      externalMetadataColumnId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_36]"
+                      lineageId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0].Columns[RegistrationSTAGINGDerived]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -15068,8 +16296,44 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_34]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="255"
                       name="Param_34">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_35]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_35">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_36]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_36">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts).Inputs[OLE DB Command Input].ExternalColumns[Param_37]"
+                      dataType="i4"
+                      name="Param_37">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -15151,9 +16415,14 @@ WHERE
               startId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Output 0]"
-              endId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Inputs[Input 0]"
               name="Output 0"
               startId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Replace any column that is &quot;-&quot; with NULL.Outputs[Output 0]" />
+            <path
+              refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Output 01]"
+              endId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Data Conversion.Inputs[Data Conversion Input]"
+              name="Output 0"
+              startId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table.Outputs[Output 0]" />
             <path
               refId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Sort Output]"
               endId="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Merge Join.Inputs[Merge Join Left Input]"
@@ -15945,12 +17214,12 @@ public class ScriptMain : UserComponent
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
                     Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
-                    Row.RegistrationSTAGINGDerived = contractid.Substring(8);
+                    Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 4) == "RCT1")
                 {
                     Row.CodeSTAGINGDerived = contractid.Substring(0, 4);
-                    Row.DeptSTAGINGDerived = contractid.Substring(3, 3);
+                    Row.DeptSTAGINGDerived = contractid.Substring(4, 3);
                     Row.RegistrationSTAGINGDerived = contractid.Substring(7);
                 }
                 else if (contractid.Substring(0, 4) == "PRC2")
@@ -16910,20 +18179,20 @@ public class Variables
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:CodeName>SC_fb028c57ea614638b8dd265863f2a053</msb:CodeName>
 		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_fb028c57ea614638b8dd265863f2a053</msb:CodeName>
 		<msb:DisplayName>SC_fb028c57ea614638b8dd265863f2a053</msb:DisplayName>
 		<msb:ProjectId>{23FD14D9-B3D3-4B01-A362-67C52E5017B3}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_fb028c57ea614638b8dd265863f2a053.csproj"/>
-		<msb:File Include="Properties\AssemblyInfo.cs"/>
 		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="main.cs"/>
 		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
 	</msb:ItemGroup>
 </c:Project>]]></arrayElement>
@@ -17060,7 +18329,7 @@ namespace SC_fb028c57ea614638b8dd265863f2a053.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDABK+GV8AAAAAAAAAAOAAAiELAQsAADYAAAAIAAAAAAAAflUA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAB0sH18AAAAAAAAAAOAAAiELAQsAADYAAAAIAAAAAAAAflUA
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACgAAAAAgAAAAAAAAMAQIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADBVAABLAAAAAGAAAAgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -17075,8 +18344,8 @@ bxQAAApyEQAAcCgVAAAKLC4DBhYZbxQAAApvWAAABgMGGRlvFAAACm9WAAAGAwYcbxYAAApvVAAA
 BjimAwAABhYabxQAAApyGQAAcCgVAAAKLC4DBhYabxQAAApvWAAABgMGGhlvFAAACm9WAAAGAwYd
 bxYAAApvVAAABjhkAwAABhYZbxQAAApyIwAAcCgVAAAKLC4DBhYZbxQAAApvWAAABgMGGRlvFAAA
 Cm9WAAAGAwYcbxYAAApvVAAABjgiAwAABhYabxQAAApyKwAAcCgVAAAKLC4DBhYabxQAAApvWAAA
-BgMGGhlvFAAACm9WAAAGAwYebxYAAApvVAAABjjgAgAABhYabxQAAApyNQAAcCgVAAAKLC4DBhYa
-bxQAAApvWAAABgMGGRlvFAAACm9WAAAGAwYdbxYAAApvVAAABjieAgAABhYabxQAAApyPwAAcCgV
+BgMGGhlvFAAACm9WAAAGAwYdbxYAAApvVAAABjjgAgAABhYabxQAAApyNQAAcCgVAAAKLC4DBhYa
+bxQAAApvWAAABgMGGhlvFAAACm9WAAAGAwYdbxYAAApvVAAABjieAgAABhYabxQAAApyPwAAcCgV
 AAAKLC4DBhYabxQAAApvWAAABgMGGhlvFAAACm9WAAAGAwYdbxYAAApvVAAABjhcAgAABhYZbxQA
 AApySQAAcCgVAAAKLC4DBhYZbxQAAApvWAAABgMGGRlvFAAACm9WAAAGAwYcbxYAAApvVAAABjga
 AgAABhYZbxQAAApyUQAAcCgVAAAKLC4DBhYZbxQAAApvWAAABgMGGRlvFAAACm9WAAAGAwYcbxYA
@@ -17189,7 +18458,7 @@ AAIAPwBtAAIAQABvAAIAQQBxAAIAQgBzAAIAQwB1AAIARAB3AAIARQB5AAIARgB7AAIARwB9AAIA
 SAB/AAIASQCBAAIASgCDAAIASwCFAAIATACHAAIATQCJAAIATgCLAAIATwCNAAIAUACPAAIAUQCR
 AAIAUgCTAAIAUwCVAAEAVACXAAEAVQCZAAEAVgCbAAEAVwCdAAEAWACfAAEAWQChAAEAWgCjAAEA
 WwClAAEAXACnAAEAXQCpAAEAXgCrAAEAXwCtAAIAZQCvAAIAZgCxAAEAZwCxAAIAaACzAASAAAAB
-AAAAVR1hUgAAAAAAAHoTAAAMAAAAAAAAAAAAAAABALAAAAAAAAQAAAAAAAAAAAAAAAoACwEAAAAA
+AAAAWR1mZgAAAAAAAHoTAAAMAAAAAAAAAAAAAAABALAAAAAAAAQAAAAAAAAAAAAAAAoACwEAAAAA
 BAAAAAAAAAAAAAAACgAUAQAAAAAMAAAAAAAAAAAAAAABAFUBAAAAAAAAAAABAAAAbxUAAAAAAAAA
 PE1vZHVsZT4AU0NfZmIwMjhjNTdlYTYxNDYzOGI4ZGQyNjU4NjNmMmEwNTMuZGxsAFVzZXJDb21w
 b25lbnQAU2NyaXB0TWFpbgBJbnB1dDBCdWZmZXIAQ29ubmVjdGlvbnMAVmFyaWFibGVzAFJlc291
@@ -17296,8 +18565,8 @@ YwB1AHIAZQBkAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQA
 IABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBh
 AGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAcVMA
 QwBfAGYAYgAwADIAOABjADUANwBlAGEANgAxADQANgAzADgAYgA4AGQAZAAyADYANQA4ADYAMwBm
-ADIAYQAwADUAMwAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAY7SV
-YIY1yk6hglORl3BWzwAIiYRdzYCAzJEIt3pcVhk04IkDBhIUAwYSGAMgAAEJIAQBCA4SFRIZBSAB
+ADIAYQAwADUAMwAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAANxiE
+WQrZr0C0rFX4t/lajAAIiYRdzYCAzJEIt3pcVhk04IkDBhIUAwYSGAMgAAEJIAQBCA4SFRIZBSAB
 ARIQCSADARIVHQgSGQMgAAgDIAACAyAADgQgABEdBCAAESEEIAEBDgQgAQECAygACAMoAAIDKAAO
 BCgAER0EKAARIQMGEgUFIAEBEgUDBhIlAwYSKQQAABIlBAAAEikFAAEBEikECAASJQQIABIpAwYS
 IAQAABIgBAgAEiAEIAEBCAYgAgIOEWEFIAEdCAgEAQAAAAUgAg4ICAUAAgIODgQgAQ4IBSABDh0D
@@ -17311,13 +18580,13 @@ b3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAABgAAIAAAAAA
 AAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYYAAAsAMAAAAAAAAA
-AAAAsAM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4AAAEAAAABAGFS
-VR0AAAEAYVJVHT8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEAcgBGAGkAbABl
+AAAAsAM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4AAAEAAAABAGZm
+WR0AAAEAZmZZHT8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEAcgBGAGkAbABl
 AEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAAAACwBBADAAABAFMA
 dAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAOwCAAABADAAMAAwADAAMAA0AGIAMAAAAHAAJAAB
 AEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAEMAXwBmAGIAMAAyADgAYwA1ADcA
 ZQBhADYAMQA0ADYAMwA4AGIAOABkAGQAMgA2ADUAOAA2ADMAZgAyAGEAMAA1ADMAAABAAA8AAQBG
-AGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4ANwA1ADAAOQAuADIAMQAwADgAOQAAAAAA
+AGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4ANwA1ADEAMwAuADIANgAyADEANAAAAAAA
 cAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwBmAGIAMAAyADgAYwA1ADcAZQBh
 ADYAMQA0ADYAMwA4AGIAOABkAGQAMgA2ADUAOAA2ADMAZgAyAGEAMAA1ADMALgBkAGwAbAAAAEgA
 EgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAg
@@ -17326,8 +18595,8 @@ XwBmAGIAMAAyADgAYwA1ADcAZQBhADYAMQA0ADYAMwA4AGIAOABkAGQAMgA2ADUAOAA2ADMAZgAy
 AGEAMAA1ADMALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8A
 ZgBiADAAMgA4AGMANQA3AGUAYQA2ADEANAA2ADMAOABiADgAZABkADIANgA1ADgANgAzAGYAMgBh
 ADAANQAzAAAARAAPAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgA3ADUA
-MAA5AC4AMgAxADAAOAA5AAAAAABIAA8AAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBu
-AAAAMQAuADAALgA3ADUAMAA5AC4AMgAxADAAOAA5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+MQAzAC4AMgA2ADIAMQA0AAAAAABIAA8AAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBu
+AAAAMQAuADAALgA3ADUAMQAzAC4AMgA2ADIAMQA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -22826,7 +24095,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22848,7 +24119,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22870,7 +24143,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22928,7 +24203,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22986,7 +24263,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23080,7 +24359,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23114,7 +24395,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23136,7 +24419,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -23187,21 +24472,25 @@ WHERE
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="273,42"
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Replace any column that is &quot;-&quot; with NULL"
-          TopLeft="508,460" />
+          Size="210,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Staging - Contracts_Staging"
+          TopLeft="371,71" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts"
+          TopLeft="718,69" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Current Datetime for Final Contracts table"
+          TopLeft="487,379" />
         <NodeLayout
           Size="236,42"
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Delete records (Final - Contracts)"
-          TopLeft="916,737" />
+          TopLeft="916,816" />
         <NodeLayout
-          Size="312,42"
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000"
-          TopLeft="135.5,746.5" />
-        <NodeLayout
-          Size="192,42"
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Find Update-able record"
-          TopLeft="540,748" />
+          Size="273,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Replace any column that is &quot;-&quot; with NULL"
+          TopLeft="508,460" />
         <NodeLayout
           Size="225,42"
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Contracts - Sort StagingID ASC"
@@ -23211,36 +24500,36 @@ WHERE
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Contracts_Staging - Sort ID ASC"
           TopLeft="358,178" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Final - Contracts"
-          TopLeft="718,69" />
+          Size="312,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000"
+          TopLeft="135.5,825.5" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Find Update-able record"
+          TopLeft="540,827" />
         <NodeLayout
           Size="156,42"
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Data Conversion"
-          TopLeft="562,537" />
+          TopLeft="562,616" />
         <NodeLayout
           Size="282,42"
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Update changed records (Final - Contracts)"
-          TopLeft="493,889" />
+          TopLeft="493,968" />
         <NodeLayout
-          Size="309,42"
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Current Datetime for Final Contracts table"
-          TopLeft="487,379" />
+          Size="364,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Derive Code, Dept, and Registration for Final Contracts table"
+          TopLeft="462,530" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Conditional Split"
+          TopLeft="566,685" />
         <NodeLayout
           Size="130,42"
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Merge Join"
           TopLeft="580,307" />
-        <NodeLayout
-          Size="210,42"
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Staging - Contracts_Staging"
-          TopLeft="371,71" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Conditional Split"
-          TopLeft="566,606" />
         <EdgeLayout
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Update-able Records]"
-          TopLeft="635,790">
+          TopLeft="635,869">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23264,7 +24553,7 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Update(ID Match)]"
-          TopLeft="639.75,648">
+          TopLeft="639.75,727">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23317,9 +24606,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23353,33 +24640,51 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Output 0]"
-          TopLeft="642.25,502">
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Output 01]"
+          TopLeft="642,572">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35"
+              EndConnector="0,44"
               Start="0,0"
-              End="0,27.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Output 0]"
+          TopLeft="644.25,502">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23401,9 +24706,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23425,9 +24728,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23449,14 +24750,12 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Insert(ID_STAGING not Match any in StagingID_FINAL)]"
-          TopLeft="606.75,648">
+          TopLeft="606.75,727">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23509,14 +24808,12 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Delete(StagingID_FINAL not Match any in ID_STAGING)]"
-          TopLeft="680.25,648">
+          TopLeft="680.25,727">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23552,7 +24849,7 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final.Paths[Data Conversion Output]"
-          TopLeft="641.75,579">
+          TopLeft="641.75,658">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23569,16 +24866,14 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000">
+    design-time-name="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Staging - Contracts_Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23604,7 +24899,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Staging - Contracts_Staging">
+    design-time-name="Package\Staging To Final - Contracts - Convert Staging to appropriate data types and then Sync to Final\Insert records (Final - Contracts) - Batch 100,000">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
